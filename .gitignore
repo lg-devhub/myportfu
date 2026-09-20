@@ -1,0 +1,13 @@
+# Variáveis de ambiente e credenciais sensíveis
+.env
+.env.local
+.env.*.local
+js/config.js
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log

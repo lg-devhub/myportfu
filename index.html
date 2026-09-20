@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="SEU NOME — Desenvolvedor de Software especializado em aplicações web, APIs e soluções digitais modernas." />
+  <meta name="description"
+    content="SEU NOME — Desenvolvedor de Software especializado em aplicações web, APIs e soluções digitais modernas." />
   <meta property="og:title" content="SEU NOME — Software Developer" />
   <meta property="og:description" content="Portfólio profissional de SEU NOME, desenvolvedor de software." />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23F5F5F5'/></svg>" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23F5F5F5'/></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <title>SEU NOME — Software Developer</title>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <title>Luiz Gustavo - Portfolio</title>
 </head>
+
 <body>
 
   <!-- ====================================================
@@ -25,18 +32,18 @@
       <a href="#home" class="nav-logo" aria-label="Ir para página inicial">
         <span class="nav-logo-icon" aria-hidden="true">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
-            <circle cx="12" cy="12" r="3.5" fill="currentColor"/>
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
+            <circle cx="12" cy="12" r="3.5" fill="currentColor" />
           </svg>
         </span>
-        <span class="nav-logo-name">SEU NOME</span>
+        <span class="nav-logo-name">Luiz Gustavo de Oliveira</span>
       </a>
 
       <ul class="nav-links" role="list">
-        <li><a href="#home"    class="nav-link is-active" data-page="home">Home</a></li>
-        <li><a href="#work"    class="nav-link" data-page="work">Work</a></li>
-        <li><a href="#about"   class="nav-link" data-page="about">About</a></li>
-        <li><a href="#contact" class="nav-link" data-page="contact">Contact</a></li>
+        <li><a href="#home" class="nav-link is-active" data-page="home">Home</a></li>
+        <li><a href="#work" class="nav-link" data-page="work">Projetos</a></li>
+        <li><a href="#about" class="nav-link" data-page="about">Sobre</a></li>
+        <li><a href="#contact" class="nav-link" data-page="contact">Contato</a></li>
       </ul>
 
       <!-- Mobile hamburger button -->
@@ -51,9 +58,9 @@
     <!-- Mobile menu overlay -->
     <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu de navegação">
       <ul class="mobile-menu-links" role="list">
-        <li><a href="#home"    class="mobile-nav-link is-active" data-page="home">Home</a></li>
-        <li><a href="#work"    class="mobile-nav-link" data-page="work">Work</a></li>
-        <li><a href="#about"   class="mobile-nav-link" data-page="about">About</a></li>
+        <li><a href="#home" class="mobile-nav-link is-active" data-page="home">Home</a></li>
+        <li><a href="#work" class="mobile-nav-link" data-page="work">Work</a></li>
+        <li><a href="#about" class="mobile-nav-link" data-page="about">About</a></li>
         <li><a href="#contact" class="mobile-nav-link" data-page="contact">Contact</a></li>
       </ul>
     </div>
@@ -67,22 +74,28 @@
     <!-- LEFT PANEL — edge-to-edge filled, stays fixed while right scrolls -->
     <aside class="panel-left" aria-label="Imagem de destaque">
       <div class="panel-left-image-wrapper">
-        <img
-          src="assets/img1.jpg"
-          alt="Retrato de SEU NOME — Desenvolvedor de Software"
-          class="panel-left-image"
-          id="panel-left-image"
-          loading="eager"
-        />
-        <!-- Center circular action button -->
-        <a href="#work" class="panel-left-action" aria-label="Ver projetos" data-page="work">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="7" y1="17" x2="17" y2="7"></line>
-            <polyline points="7 7 17 7 17 17"></polyline>
+        <img src="assets/homewallpaper.png" alt="Retrato de SEU NOME — Desenvolvedor de Software" class="panel-left-image"
+          id="panel-left-image" loading="eager" />
+        <video
+          id="panel-left-video"
+          class="panel-left-video"
+          src="assets/videominecraft.mp4"
+          playsinline
+          preload="auto"
+          aria-hidden="true"
+        ></video>
+        <!-- Play/Pause button — visible only on contact page on hover -->
+        <button class="panel-video-playpause" id="panel-video-playpause" aria-label="Pausar vídeo" hidden>
+          <!-- Play icon -->
+          <svg class="icon-play" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <polygon points="5 3 19 12 5 21 5 3"/>
           </svg>
-        </a>
-        <!-- Bottom-right tab badge -->
-        <div class="panel-left-badge">Featured Project</div>
+          <!-- Pause icon -->
+          <svg class="icon-pause" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <rect x="6" y="4" width="4" height="16" rx="1"/>
+            <rect x="14" y="4" width="4" height="16" rx="1"/>
+          </svg>
+        </button>
       </div>
     </aside>
 
@@ -96,22 +109,17 @@
         <div class="home-top-row">
           <div class="home-about-card">
             <div class="home-about-header">
-              <img
-                src="assets/img1.jpg"
-                alt="Foto de SEU NOME"
-                class="home-avatar"
-                loading="lazy"
-              />
+              <img src="assets/profilepixel.jpg" alt="Foto de Luiz Gustavo" class="home-avatar" loading="lazy" />
               <div class="home-about-info">
-                <h1 class="home-name">SEU NOME</h1>
-                <p class="home-role">Software Developer</p>
+                <h1 class="home-name">Luiz Gustavo de Oliveira</h1>
+                <p class="home-role">Dev. FullStack em formação</p>
               </div>
             </div>
 
             <p class="home-bio">
-              Sou desenvolvedor de software focado na criação de aplicações modernas, funcionais e bem estruturadas.
-              Gosto de transformar problemas em soluções através da tecnologia, combinando desenvolvimento,
-              lógica e experiência do usuário.
+              Movido por código, curiosidade e vontade de construir soluções digitais
+              que realmente fazem a diferença. Com uma paixão por unir estética e
+              funcionalidade.
             </p>
           </div>
 
@@ -136,7 +144,7 @@
       <!-- PAGE: WORK -->
       <article class="page" id="page-work" data-page="work" hidden>
         <header class="page-header">
-          <h1 class="page-title">Work</h1>
+          <h1 class="page-title">Projetos</h1>
           <p class="page-intro">
             Meus projetos representam minha experiência prática com desenvolvimento de software,
             explorando diferentes tecnologias, arquiteturas e soluções.
@@ -150,19 +158,36 @@
       <!-- PAGE: ABOUT -->
       <article class="page" id="page-about" data-page="about" hidden>
         <header class="page-header">
-          <h1 class="page-title">About</h1>
+          <h1 class="page-title">Sobre</h1>
         </header>
 
         <div class="about-bio">
-          <p>Sou estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor apaixonado por tecnologia.</p>
-          <p>
-            Minha trajetória combina formação técnica em desenvolvimento de sistemas com experiência prática
-            em ambientes que exigem organização, responsabilidade e resolução de problemas.
-          </p>
-          <p>
-            Tenho interesse principalmente em desenvolvimento de software, APIs, bancos de dados,
-            sistemas web e arquitetura de aplicações.
-          </p>
+          <p>Desenvolvedor Full Stack em formação, com Técnico em Desenvolvimento de Sistemas pelo SENAI e atualmente cursando Análise e Desenvolvimento de Sistemas.</p>
+          <p>Tenho experiência profissional em Tecnologia da Informação, adquirida durante minha atuação em seções de TI do Exército Brasileiro, onde trabalhei com suporte técnico, manutenção de hardware e software, equipamentos de vigilância e atendimento às demandas dos usuários.</p>
+          <p>Meu foco está no desenvolvimento de software, Machine Learning e na construção de aplicações web, utilizando tecnologias como Python, TypeScript, JavaScript, Node.js, React, Angular e Go.</p>
+          <p>Durante minha formação, venho desenvolvendo projetos acadêmicos e pessoais envolvendo desenvolvimento Full Stack, desenvolvimento de APIs REST, integração entre aplicações, bancos de dados, lógica de programação, programação orientada a objetos e versionamento de código com Git e GitHub.</p>
+
+          <div class="about-tech-highlight">
+            <h3 class="about-tech-highlight-title">Tecnologias e conhecimentos:</h3>
+            <ul class="about-tech-pills">
+              <li>Python</li>
+              <li>TypeScript</li>
+              <li>JavaScript</li>
+              <li>Node.js</li>
+              <li>Go</li>
+              <li>React</li>
+              <li>Angular</li>
+              <li>APIs REST</li>
+              <li>Git e GitHub</li>
+              <li>SQL e Bancos de Dados</li>
+              <li>Desenvolvimento Web</li>
+              <li>Programação Orientada a Objetos</li>
+              <li>Desenvolvimento Full Stack</li>
+            </ul>
+          </div>
+
+          <p>Minha experiência profissional também contribuiu para o desenvolvimento de competências como resolução de problemas, organização, responsabilidade, trabalho em equipe e atendimento a demandas em ambiente profissional.</p>
+          <p>Atualmente busco uma oportunidade de Estágio ou Desenvolvedor Júnior na área de Desenvolvimento de Software, onde possa aplicar meus conhecimentos, contribuir com a equipe e continuar evoluindo profissionalmente como desenvolvedor.</p>
         </div>
 
         <!-- Skills section -->
@@ -173,19 +198,75 @@
           </div>
         </section>
 
-        <!-- Experience & Education -->
-        <section class="about-section" aria-labelledby="experience-title">
-          <h2 class="about-section-title" id="experience-title">Experiência & Formação</h2>
-          <div class="timeline" id="timeline">
-            <!-- Populated by JavaScript -->
-          </div>
-        </section>
+        <!-- Two columns: Experiência & Formação -->
+        <div class="about-two-columns">
+
+          <!-- Coluna 1: Experiência -->
+          <section class="about-section about-card-col" aria-labelledby="experience-title">
+            <h2 class="about-section-title" id="experience-title">Experiência</h2>
+            <div class="about-entry">
+              <div class="about-entry-header">
+                <div class="about-entry-img-wrapper">
+                  <img src="assets/exercito.png" alt="Exército Brasileiro" class="about-entry-img" loading="lazy" />
+                </div>
+                <div class="about-entry-info">
+                  <h3 class="about-entry-title">Militar - Exército Brasileiro</h3>
+                  <p class="about-entry-subtitle">Atuação em Seção de Informática, Almoxarifado e Secretaria</p>
+                </div>
+              </div>
+              <ul class="about-entry-list">
+                <li>Atuação na Seção de Informática, realizando manutenção de hardware e software, equipamentos de vigilância, suporte técnico aos usuários e atendimento às demandas relacionadas aos recursos de Tecnologia da Informação.</li>
+                <li>Realização de atividades de manutenção, configuração e suporte de equipamentos de informática, contribuindo para o funcionamento dos recursos tecnológicos da unidade.</li>
+                <li>Atuação no Almoxarifado, realizando controle, organização e movimentação de materiais e equipamentos.</li>
+                <li>Apoio às atividades da Secretaria do Batalhão, auxiliando no despacho, recebimento, conferência e correção de documentações administrativas.</li>
+                <li>Organização e controle de documentos e informações, garantindo maior precisão e organização dos processos internos.</li>
+                <li>Desenvolvimento de experiência profissional em ambiente organizacional, com atuação em suporte técnico, resolução de problemas, organização, responsabilidade e atendimento às demandas internas.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Coluna 2: Formação -->
+          <section class="about-section about-card-col" aria-labelledby="education-title">
+            <h2 class="about-section-title" id="education-title">Formação</h2>
+
+            <div class="about-entry-item">
+              <div class="about-entry-header">
+                <div class="about-entry-img-wrapper about-entry-icon-wrapper">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                  </svg>
+                </div>
+                <div class="about-entry-info">
+                  <span class="about-entry-status">Cursando</span>
+                  <h3 class="about-entry-title">Graduação em Análise e Desenvolvimento de Sistemas</h3>
+                  <p class="about-entry-subtitle">Ensino Superior</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-entry-item">
+              <div class="about-entry-header">
+                <div class="about-entry-img-wrapper">
+                  <img src="assets/senai.png" alt="SENAI Félix Guisard" class="about-entry-img" loading="lazy" />
+                </div>
+                <div class="about-entry-info">
+                  <span class="about-entry-period">2021 – 2022</span>
+                  <h3 class="about-entry-title">Técnico em Desenvolvimento de Sistemas</h3>
+                  <p class="about-entry-subtitle">SENAI Félix Guisard</p>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+        </div>
       </article>
 
       <!-- PAGE: CONTACT -->
       <article class="page" id="page-contact" data-page="contact" hidden>
         <header class="page-header">
-          <h1 class="page-title">Let's Talk</h1>
+          <h1 class="page-title">Vamos Conversar...</h1>
         </header>
 
         <!-- Contact form -->
@@ -196,13 +277,15 @@
         <form class="contact-form" id="contact-form" novalidate aria-label="Formulário de contato">
           <div class="form-group">
             <label for="input-name" class="form-label">Seu Nome</label>
-            <input type="text" id="input-name" name="name" class="form-input" placeholder="João Silva" autocomplete="name" required />
+            <input type="text" id="input-name" name="name" class="form-input" placeholder="João Silva"
+              autocomplete="name" required />
             <span class="form-error" role="alert" aria-live="polite"></span>
           </div>
 
           <div class="form-group">
             <label for="input-email" class="form-label">Seu Email</label>
-            <input type="email" id="input-email" name="email" class="form-input" placeholder="joao@email.com" autocomplete="email" required />
+            <input type="email" id="input-email" name="email" class="form-input" placeholder="joao@email.com"
+              autocomplete="email" required />
             <span class="form-error" role="alert" aria-live="polite"></span>
           </div>
 
@@ -213,16 +296,22 @@
 
           <div class="form-group">
             <label for="input-message" class="form-label">Sua Mensagem</label>
-            <textarea id="input-message" name="message" class="form-input form-textarea" placeholder="Olá, gostaria de..." rows="5" required></textarea>
+            <textarea id="input-message" name="message" class="form-input form-textarea"
+              placeholder="Olá, gostaria de..." rows="5" required></textarea>
             <span class="form-error" role="alert" aria-live="polite"></span>
           </div>
 
-          <button type="submit" class="form-submit" aria-label="Enviar mensagem">
-            Enviar Mensagem
+          <button type="submit" class="form-submit" id="form-submit" aria-label="Enviar mensagem">
+            <span class="btn-label">Enviar Mensagem</span>
+            <span class="btn-loading" hidden>Enviando…</span>
           </button>
 
           <div class="form-success" id="form-success" role="alert" aria-live="polite" hidden>
-            Obrigado pelo contato. Retornarei em breve.
+            ✓ Mensagem enviada! Retornarei em breve.
+          </div>
+
+          <div class="form-error-msg" id="form-error-msg" role="alert" aria-live="polite" hidden>
+            ✕ Falha ao enviar. Tente novamente ou entre em contato por email diretamente.
           </div>
         </form>
 
@@ -242,8 +331,9 @@
     <div class="project-modal-backdrop" id="modal-backdrop"></div>
     <div class="project-modal-content">
       <button class="modal-close" id="modal-close" aria-label="Fechar projeto">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
         </svg>
       </button>
 
@@ -271,6 +361,8 @@
     </div>
   </div>
 
+  <script src="js/config.js"></script>
   <script src="js/script.js"></script>
 </body>
+
 </html>

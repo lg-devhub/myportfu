@@ -24,109 +24,160 @@
 const portfolioData = {
 
   personal: {
-    name:     'SEU NOME',
-    role:     'Software Developer',
-    email:    'seuemail@email.com',
+    name: 'Luiz Gustavo de Oliveira',
+    role: 'Dev. FullStack em formação',
+    email: 'ogusta321@gmail.com',
     location: 'Brasil',
-    bio:      'Sou desenvolvedor de software focado na criação de aplicações modernas, funcionais e bem estruturadas. Gosto de transformar problemas em soluções através da tecnologia, combinando desenvolvimento, lógica e experiência do usuário.',
+    bio: 'Movido por código, curiosidade e vontade de construir soluções digitais que realmente fazem a diferença. Com uma paixão por unir estética e funcionalidade.',
   },
 
   // Substitute with your real URLs before publishing.
   socialLinks: [
-    { label: 'GitHub',   url: 'https://github.com/seuusuario',          icon: 'github',   openNewTab: true  },
-    { label: 'LinkedIn', url: 'https://linkedin.com/in/seuusuario',     icon: 'linkedin', openNewTab: true  },
-    { label: 'Instagram',url: 'https://instagram.com/seuusuario',       icon: 'instagram',openNewTab: true  },
-    { label: 'Email',    url: 'mailto:seuemail@email.com',              icon: 'email',    openNewTab: false },
+    { label: 'GitHub', url: 'https://github.com/lg-devhub', icon: 'github', openNewTab: true },
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/luiz-gustavo-de-oliveira-abab43259/', icon: 'linkedin', openNewTab: true },
+    { label: 'Instagram', url: 'https://instagram.com/acc.gustavo', icon: 'instagram', openNewTab: true },
+    { label: 'Email', url: 'mailto:ogusta321@gmail.com', icon: 'email', openNewTab: false },
   ],
 
   projects: [
     {
-      id: 'stocka',
-      title:       'Stocka',
-      tagline:     'Sistema de Gestão de Laboratórios e Ativos',
-      description: 'Plataforma completa para gerenciamento de ativos, equipamentos e laboratórios. Permite controle de inventário, rastreio de movimentações e geração de relatórios.',
-      objective:   'Automatizar a gestão de ativos físicos em ambientes educacionais e corporativos, reduzindo falhas humanas e aumentando a rastreabilidade.',
-      technologies:['Java', 'Vue.js', 'PostgreSQL'],
-      features:    ['Cadastro e controle de ativos', 'Relatórios e histórico de movimentações', 'Autenticação com controle de acesso', 'Dashboard administrativo'],
-      year:        '2026',
-      image:       'assets/img2.jpg',
-      github:      'https://github.com/seuusuario/stocka',
-      demo:        '',
+      id: 'golang-projects',
+      title: 'Golang Projects',
+      tagline: 'Coleção de projetos desenvolvidos em Go',
+      description: 'Repositório com projetos práticos em Go, abrangendo desde os fundamentos da linguagem até arquiteturas mais avançadas de backend.',
+      objective: 'Consolidar o aprendizado em Go através de projetos reais, explorando os principais recursos da linguagem e as melhores práticas do ecossistema backend.',
+      technologies: ['Go', 'Golang'],
+      features: [
+        'Fundamentos de Go',
+        'APIs e Serviços Web',
+        'Concorrência com Goroutines e Canais',
+        'Integração de Banco de Dados',
+        'Código Limpo',
+        'Arquitetura de Software',
+        'Melhores Práticas de Desenvolvimento Backend',
+      ],
+      year: '2026',
+      image: 'assets/golanggif.gif',
+      github: 'https://github.com/lg-devhub/GOLANG-PROJECTS',
+      demo: '',
     },
     {
-      id: 'devlinks',
-      title:       'DevLinks',
-      tagline:     'Agregador de Links para Desenvolvedores',
-      description: 'Aplicação web estilo link-in-bio para desenvolvedores consolidarem seus perfis, projetos e redes sociais em uma única página personalizada.',
-      objective:   'Oferecer uma alternativa simples e rápida para centralizar links profissionais sem depender de plataformas de terceiros.',
-      technologies:['HTML', 'CSS', 'JavaScript'],
-      features:    ['Personalização de tema claro/escuro', 'Links externos com preview', 'Responsivo para todos os dispositivos'],
-      year:        '2026',
-      image:       'assets/img5.jpg',
-      github:      'https://github.com/seuusuario/devlinks',
-      demo:        '',
+      id: 'catequese',
+      title: 'Sistema de Inscrições — Catequese',
+      tagline: 'Projeto de Extensão Universitária · Paróquia Sagrada Família',
+      description: 'Projeto de extensão comunitário desenvolvido em grupo como parte da grade curricular da faculdade. O sistema foi criado para a Paróquia Sagrada Família de Taubaté com o objetivo de digitalizar e controlar as inscrições para o programa de Catequese, substituindo processos manuais por uma solução web organizada e acessível.',
+      objective: 'Contribuir com a comunidade local através da tecnologia, oferecendo à paróquia uma ferramenta simples e eficiente para gerenciar candidatos inscritos na catequese.',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'MySQL', 'Python/Flask'],
+      features: [
+        'Cadastro e inscrição online de catequizandos',
+        'Painel administrativo para controle de inscrições',
+        'Listagem e filtragem de inscritos',
+        'Projeto em grupo — extensão comunitária universitária',
+        'Desenvolvido para a Paróquia Sagrada Família de Taubaté',
+      ],
+      year: '2026',
+      image: 'assets/pomba.jpg',
+      github: 'https://github.com/lg-devhub/EXTENSION_PROJECTS',
+      demo: '',
     },
     {
-      id: 'apigo',
-      title:       'API Go',
-      tagline:     'REST API com Autenticação JWT',
-      description: 'API RESTful construída em Go com autenticação via JWT, estrutura MVC e integração com banco de dados relacional. Projetada para ser performática e simples de escalar.',
-      objective:   'Demonstrar domínio de Go e arquitetura de APIs para projetos backend profissionais.',
-      technologies:['Go', 'PostgreSQL', 'JWT'],
-      features:    ['Autenticação e autorização JWT', 'CRUD completo de recursos', 'Middleware de logging e rate limiting', 'Deploy via Docker'],
-      year:        '2026',
-      image:       'assets/img3.jpg',
-      github:      'https://github.com/seuusuario/api-go',
-      demo:        '',
+      id: 'nodejs-projects',
+      title: 'Node.js Projects',
+      tagline: 'Projetos em JavaScript e TypeScript com Node.js',
+      description: 'Repositório com projetos práticos desenvolvidos em JavaScript e TypeScript utilizando Node.js. Foco na construção de APIs REST robustas, gerenciamento de rotas, middlewares e integração com bancos de dados.',
+      objective: 'Aprofundar o domínio do ecossistema Node.js, explorando boas práticas de desenvolvimento backend com JavaScript e TypeScript.',
+      technologies: ['Node.js', 'JavaScript', 'TypeScript'],
+      features: [
+        'APIs REST com Node.js',
+        'Rotas e middlewares',
+        'JavaScript e TypeScript',
+        'Integração com Banco de Dados',
+        'Autenticação e autorização',
+        'Boas práticas de desenvolvimento backend',
+      ],
+      year: '2026',
+      image: 'assets/node.png',
+      github: 'https://github.com/lg-devhub/nodejs-projects',
+      demo: '',
     },
     {
-      id: 'taskboard',
-      title:       'TaskBoard',
-      tagline:     'Gerenciador de Tarefas Kanban',
-      description: 'Aplicação Kanban para organização de tarefas com drag-and-drop, categorias e filtros. Interface limpa e focada em produtividade.',
-      objective:   'Construir uma ferramenta pessoal de produtividade explorando manipulação de DOM e persistência local.',
-      technologies:['HTML', 'CSS', 'JavaScript'],
-      features:    ['Drag-and-drop entre colunas', 'Persistência via localStorage', 'Filtro e busca de tarefas', 'Exportação de tarefas'],
-      year:        '2025',
-      image:       'assets/img4.jpg',
-      github:      'https://github.com/seuusuario/taskboard',
-      demo:        '',
+      id: 'shelfscanner',
+      title: 'ShelfScanner',
+      tagline: 'Visão Computacional com IA para identificação de livros',
+      description: 'ShelfScanner é um projeto de visão computacional baseado em inteligência artificial que extrai texto de imagens de estantes de livros utilizando OCR e consulta APIs externas para obter informações sobre os livros. O sistema integra processamento de imagens, reconhecimento de texto e consumo de APIs para identificar livros e retornar dados estruturados como título e autor.',
+      objective: 'Explorar visão computacional e IA aplicadas a um problema real, combinando OCR, processamento de imagens e integração com APIs externas para identificar e catalogar livros automaticamente.',
+      technologies: ['Python', 'OCR', 'Computer Vision', 'AI'],
+      features: [
+        'Extração de texto de imagens via OCR',
+        'Processamento e análise de imagens de estantes',
+        'Consulta a APIs externas de livros',
+        'Retorno de dados estruturados (título e autor)',
+        'Integração entre visão computacional e consumo de APIs',
+      ],
+      year: '2026',
+      image: 'assets/books.jpg',
+      github: 'https://github.com/lg-devhub/machine_learning_projects',
+      demo: '',
     },
   ],
 
   skills: [
-    { group: 'Frontend',  items: ['HTML', 'CSS', 'JavaScript', 'Vue.js'] },
-    { group: 'Backend',   items: ['Java', 'Go'] },
-    { group: 'Database',  items: ['MySQL', 'PostgreSQL'] },
-    { group: 'Tools',     items: ['Git', 'GitHub', 'VS Code', 'Docker'] },
+    {
+      group: 'Front-End',
+      items: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Angular'],
+    },
+    {
+      group: 'Back-End',
+      items: ['TypeScript', 'Node.JS', 'Golang (GO)', 'Python', 'Flask', 'FastAPI', 'Java'],
+    },
+    {
+      group: 'Infraestrutura',
+      items: ['Docker', 'Amazon Web Services'],
+    },
+    {
+      group: 'Banco de Dados',
+      items: ['MySQL', 'HeidiSQL', 'XAMPP'],
+    },
+    {
+      group: 'Inteligências Artificiais',
+      items: ['Machine Learning', 'Linguagem R'],
+    },
   ],
 
-  experience: [
-    {
-      period:      'Em andamento',
-      title:       'Graduação',
-      subtitle:    'Análise e Desenvolvimento de Sistemas',
-      description: 'Formação superior focada em desenvolvimento de software, banco de dados, engenharia de sistemas e arquitetura de aplicações.',
+  experience: {
+    military: {
+      role: 'Militar - Exército Brasileiro',
+      department: 'Atuação em Seção de Informática, Almoxarifado e Secretaria',
+      image: 'assets/exercito.png',
+      activities: [
+        'Atuação na Seção de Informática, realizando manutenção de hardware e software, equipamentos de vigilância, suporte técnico aos usuários e atendimento às demandas relacionadas aos recursos de Tecnologia da Informação.',
+        'Realização de atividades de manutenção, configuração e suporte de equipamentos de informática, contribuindo para o funcionamento dos recursos tecnológicos da unidade.',
+        'Atuação no Almoxarifado, realizando controle, organização e movimentação de materiais e equipamentos.',
+        'Apoio às atividades da Secretaria do Batalhão, auxiliando no despacho, recebimento, conferência e correção de documentações administrativas.',
+        'Organização e controle de documentos e informações, garantindo maior precisão e organização dos processos internos.',
+        'Desenvolvimento de experiência profissional em ambiente organizacional, com atuação em suporte técnico, resolução de problemas, organização, responsabilidade e atendimento às demandas internas.',
+      ],
     },
-    {
-      period:      '2024',
-      title:       'Formação Técnica',
-      subtitle:    'Desenvolvimento de Sistemas',
-      description: 'Curso técnico com base em lógica de programação, desenvolvimento web, banco de dados relacional e boas práticas de engenharia de software.',
-    },
-    {
-      period:      '2024 – 2025',
-      title:       'Experiência Prática',
-      subtitle:    'Tecnologia & Suporte',
-      description: 'Experiência em ambientes que exigem organização, responsabilidade e resolução de problemas com foco em tecnologia e sistemas.',
-    },
-  ],
+    education: [
+      {
+        title: 'Graduação em Análise e Desenvolvimento de Sistemas',
+        status: 'Cursando',
+        subtitle: 'Ensino Superior',
+      },
+      {
+        title: 'Técnico em Desenvolvimento de Sistemas',
+        period: '2021 – 2022',
+        institution: 'SENAI Félix Guisard',
+        image: 'assets/senai.png',
+      },
+    ],
+  },
 
   // Images used per page on the left panel
   pageImages: {
-    home:    'assets/img1.jpg',
-    work:    'assets/img2.jpg',
-    about:   'assets/img4.jpg',
+    home: 'assets/homewallpaper.png',
+    work: 'assets/orb.gif',
+    about: 'assets/blackwall.gif',
     contact: 'assets/img3.jpg',
   },
 };
@@ -136,43 +187,43 @@ const portfolioData = {
    2. DOM REFERENCES
    ============================================================ */
 const dom = {
-  navLinks:          document.querySelectorAll('.nav-link'),
-  mobileNavLinks:    document.querySelectorAll('.mobile-nav-link'),
-  allPages:          document.querySelectorAll('.page'),
-  panelLeftImage:    document.getElementById('panel-left-image'),
-  homeProjectsGrid:  document.getElementById('home-projects-grid'),
-  socialLinksList:   document.querySelector('.home-social-stack'),
-  workProjectList:   document.getElementById('work-project-list'),
-  skillsGrid:        document.getElementById('skills-grid'),
-  timeline:          document.getElementById('timeline'),
-  contactInfoGrid:   document.getElementById('contact-info-grid'),
-  viewAllLink:       document.querySelector('.section-view-all'),
+  navLinks: document.querySelectorAll('.nav-link'),
+  mobileNavLinks: document.querySelectorAll('.mobile-nav-link'),
+  allPages: document.querySelectorAll('.page'),
+  panelLeftImage: document.getElementById('panel-left-image'),
+  homeProjectsGrid: document.getElementById('home-projects-grid'),
+  socialLinksList: document.querySelector('.home-social-stack'),
+  workProjectList: document.getElementById('work-project-list'),
+  skillsGrid: document.getElementById('skills-grid'),
+  timeline: document.getElementById('timeline'),
+  contactInfoGrid: document.getElementById('contact-info-grid'),
+  viewAllLink: document.querySelector('.section-view-all'),
 
   // Modal
-  modal:             document.getElementById('project-modal'),
-  modalBackdrop:     document.getElementById('modal-backdrop'),
-  modalClose:        document.getElementById('modal-close'),
-  modalImage:        document.getElementById('modal-image'),
+  modal: document.getElementById('project-modal'),
+  modalBackdrop: document.getElementById('modal-backdrop'),
+  modalClose: document.getElementById('modal-close'),
+  modalImage: document.getElementById('modal-image'),
   modalImagePlaceholder: document.getElementById('modal-image-placeholder'),
-  modalYear:         document.getElementById('modal-year'),
-  modalTechList:     document.getElementById('modal-tech-list'),
-  modalTitle:        document.getElementById('modal-title'),
-  modalDescription:  document.getElementById('modal-description'),
-  modalObjective:    document.getElementById('modal-objective'),
+  modalYear: document.getElementById('modal-year'),
+  modalTechList: document.getElementById('modal-tech-list'),
+  modalTitle: document.getElementById('modal-title'),
+  modalDescription: document.getElementById('modal-description'),
+  modalObjective: document.getElementById('modal-objective'),
   modalFeaturesWrapper: document.getElementById('modal-features-wrapper'),
   modalFeaturesList: document.getElementById('modal-features-list'),
-  modalActions:      document.getElementById('modal-actions'),
+  modalActions: document.getElementById('modal-actions'),
 
   // Form
-  contactForm:       document.getElementById('contact-form'),
-  inputName:         document.getElementById('input-name'),
-  inputEmail:        document.getElementById('input-email'),
-  inputMessage:      document.getElementById('input-message'),
-  formSuccess:       document.getElementById('form-success'),
+  contactForm: document.getElementById('contact-form'),
+  inputName: document.getElementById('input-name'),
+  inputEmail: document.getElementById('input-email'),
+  inputMessage: document.getElementById('input-message'),
+  formSuccess: document.getElementById('form-success'),
 
   // Mobile menu
-  hamburger:         document.querySelector('.nav-hamburger'),
-  mobileMenu:        document.getElementById('mobile-menu'),
+  hamburger: document.querySelector('.nav-hamburger'),
+  mobileMenu: document.getElementById('mobile-menu'),
 };
 
 
@@ -265,6 +316,38 @@ window.addEventListener('popstate', () => {
    Ensures the left image is always present, visible, and edge-to-edge
    ============================================================ */
 function updateLeftPanelImage(pageId) {
+  const video = document.getElementById('panel-left-video');
+  const playPauseBtn = document.getElementById('panel-video-playpause');
+
+  if (pageId === 'contact') {
+    // Show video, hide image
+    if (dom.panelLeftImage) {
+      dom.panelLeftImage.style.opacity = '0';
+    }
+    if (video) {
+      video.classList.add('is-visible');
+      video.muted = false;
+      video.volume = 0.4;
+      video.play();
+    }
+    // Show play/pause button
+    if (playPauseBtn) {
+      playPauseBtn.hidden = false;
+      syncPlayPauseIcon(video, playPauseBtn);
+    }
+    return;
+  }
+
+  // Hide video and play/pause button, show image
+  if (video) {
+    video.classList.remove('is-visible');
+    video.pause();
+    video.currentTime = 0;
+  }
+  if (playPauseBtn) {
+    playPauseBtn.hidden = true;
+  }
+
   const src = portfolioData.pageImages[pageId] || portfolioData.pageImages.home;
   if (!dom.panelLeftImage) return;
 
@@ -284,6 +367,33 @@ function updateLeftPanelImage(pageId) {
     dom.panelLeftImage.alt = `Imagem da seção ${pageId}`;
     dom.panelLeftImage.style.opacity = '1';
   }, 150);
+}
+
+function syncPlayPauseIcon(video, btn) {
+  if (!video || !btn) return;
+  const playing = !video.paused;
+  btn.querySelector('.icon-play').style.display  = playing ? 'none' : 'block';
+  btn.querySelector('.icon-pause').style.display = playing ? 'block' : 'none';
+  btn.setAttribute('aria-label', playing ? 'Pausar vídeo' : 'Reproduzir vídeo');
+}
+
+function initVideoPlayPause() {
+  const video = document.getElementById('panel-left-video');
+  const btn   = document.getElementById('panel-video-playpause');
+  if (!video || !btn) return;
+
+  btn.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+    syncPlayPauseIcon(video, btn);
+  });
+
+  // Keep icon in sync if video ends or is played externally
+  video.addEventListener('play',  () => syncPlayPauseIcon(video, btn));
+  video.addEventListener('pause', () => syncPlayPauseIcon(video, btn));
 }
 
 
@@ -360,13 +470,6 @@ function renderHomeProjects() {
             class="project-card-image"
             loading="lazy"
           />
-          ${index === 0 ? `
-          <div class="project-card-action" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="7" y1="17" x2="17" y2="7"></line>
-              <polyline points="7 7 17 7 17 17"></polyline>
-            </svg>
-          </div>` : ''}
         </div>
         <div class="project-card-body">
           <p class="project-card-number">${String(index + 1).padStart(2, '0')}</p>
@@ -478,10 +581,10 @@ function renderContactInfo() {
   );
 
   const contactItems = [
-    { label: 'Email',       value: email,    href: `mailto:${email}` },
-    { label: 'GitHub',      value: github?.replace('https://', '') || '',  href: github  || '#' },
-    { label: 'LinkedIn',    value: linkedin?.replace('https://', '') || '', href: linkedin || '#' },
-    { label: 'Localização', value: location,  href: null },
+    { label: 'Email', value: email, href: `mailto:${email}` },
+    { label: 'GitHub', value: github?.replace('https://', '') || '', href: github || '#' },
+    { label: 'LinkedIn', value: linkedin?.replace('https://', '') || '', href: linkedin || '#' },
+    { label: 'Localização', value: location, href: null },
   ];
 
   dom.contactInfoGrid.innerHTML = contactItems
@@ -489,9 +592,9 @@ function renderContactInfo() {
       <div class="contact-info-item">
         <p class="contact-info-label">${item.label}</p>
         ${item.href
-          ? `<a class="contact-info-value" href="${item.href}" ${item.href.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''}>${item.value}</a>`
-          : `<p class="contact-info-value">${item.value}</p>`
-        }
+        ? `<a class="contact-info-value" href="${item.href}" ${item.href.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''}>${item.value}</a>`
+        : `<p class="contact-info-value">${item.value}</p>`
+      }
       </div>
     `)
     .join('');
@@ -574,8 +677,31 @@ function bindModalEvents() {
 
 
 /* ============================================================
-   10. CONTACT FORM — validation + submission
+   10. CONTACT FORM — EmailJS integration
    ============================================================ */
+
+// ─── EmailJS Configuration ───────────────────────────────────
+// As chaves são carregadas de js/config.js (definidas via .env e protegidas pelo .gitignore)
+const EMAILJS_CONFIG = {
+  publicKey:  window.ENV?.EMAILJS_PUBLIC_KEY  || '',
+  serviceId:  window.ENV?.EMAILJS_SERVICE_ID  || '',
+  templateId: window.ENV?.EMAILJS_TEMPLATE_ID || '',
+};
+// ─────────────────────────────────────────────────────────────
+
+// Template variables expected in your EmailJS template:
+//   {{from_name}}    — name filled by visitor
+//   {{from_email}}   — email filled by visitor
+//   {{subject}}      — subject filled by visitor
+//   {{message}}      — message filled by visitor
+//   {{to_email}}     — your email (set in template or here)
+
+function initEmailJS() {
+  if (typeof emailjs !== 'undefined') {
+    emailjs.init({ publicKey: EMAILJS_CONFIG.publicKey });
+  }
+}
+
 function getErrorElement(input) {
   return input.parentElement.querySelector('.form-error');
 }
@@ -624,33 +750,62 @@ function validateForm() {
   return isValid;
 }
 
-// handleFormSubmit is the single place to plug in Formspree, EmailJS, or a custom backend.
-function handleFormSubmit(e) {
-  e.preventDefault();
+function setFormLoading(isLoading) {
+  const btn       = document.getElementById('form-submit');
+  const label     = btn?.querySelector('.btn-label');
+  const loading   = btn?.querySelector('.btn-loading');
+  if (!btn) return;
 
-  if (!validateForm()) return;
-
-  /*
-    To integrate Formspree: replace the block below with:
-      fetch('https://formspree.io/f/SEU_ID', {
-        method: 'POST',
-        body: new FormData(dom.contactForm),
-        headers: { 'Accept': 'application/json' }
-      }).then(() => showFormSuccess());
-
-    To use EmailJS:
-      emailjs.sendForm('SERVICE_ID', 'TEMPLATE_ID', dom.contactForm)
-        .then(showFormSuccess);
-  */
-
-  showFormSuccess();
+  btn.disabled          = isLoading;
+  if (label)   label.hidden   = isLoading;
+  if (loading) loading.hidden = !isLoading;
 }
 
 function showFormSuccess() {
   dom.contactForm.reset();
+  document.getElementById('form-error-msg').hidden = true;
   dom.formSuccess.hidden = false;
-
   setTimeout(() => { dom.formSuccess.hidden = true; }, 6000);
+}
+
+function showFormError() {
+  document.getElementById('form-error-msg').hidden = false;
+  dom.formSuccess.hidden = true;
+  setTimeout(() => { document.getElementById('form-error-msg').hidden = true; }, 8000);
+}
+
+function handleFormSubmit(e) {
+  e.preventDefault();
+  if (!validateForm()) return;
+
+  setFormLoading(true);
+
+  const name = dom.inputName.value.trim();
+  const email = dom.inputEmail.value.trim();
+  const subject = document.getElementById('input-subject')?.value.trim() || '(sem assunto)';
+  const message = dom.inputMessage.value.trim();
+
+  const templateParams = {
+    name: name,
+    from_name: name,
+    email: email,
+    from_email: email,
+    reply_to: email,
+    subject: subject,
+    message: message,
+  };
+
+  emailjs
+    .send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, templateParams)
+    .then(() => {
+      setFormLoading(false);
+      showFormSuccess();
+    })
+    .catch((err) => {
+      console.error('EmailJS error:', err);
+      setFormLoading(false);
+      showFormError();
+    });
 }
 
 function bindFormEvents() {
@@ -720,6 +875,8 @@ function init() {
   bindModalEvents();
   bindFormEvents();
   bindMobileMenuEvents();
+  initVideoPlayPause();
+  initEmailJS();
 }
 
 document.addEventListener('DOMContentLoaded', init);
