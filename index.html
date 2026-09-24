@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="description"
     content="SEU NOME — Desenvolvedor de Software especializado em aplicações web, APIs e soluções digitais modernas." />
   <meta property="og:title" content="SEU NOME — Software Developer" />
@@ -17,64 +17,199 @@
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="preload" as="image" href="assets/homewallpaper.png" />
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <title>Luiz Gustavo - Portfolio</title>
+  <title>Luiz Gustavo de Oliveira — Portfólio</title>
 </head>
 
 <body>
 
   <!-- ====================================================
-       HEADER / NAVIGATION — Tab cutout attached to top-left
+       FLOATING BOTTOM DOCK NAVBAR
   ==================================================== -->
-  <header class="site-header" role="banner">
-    <nav class="nav-tab" role="navigation" aria-label="Navegação principal">
+  <header class="site-dock-wrapper" role="banner">
+    <nav class="nav-dock" role="navigation" aria-label="Navegação principal">
 
-      <a href="#home" class="nav-logo" aria-label="Ir para página inicial">
-        <span class="nav-logo-icon" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
-            <circle cx="12" cy="12" r="3.5" fill="currentColor" />
+      <a href="#home" class="nav-dock-brand" data-page="home" aria-label="Ir para página inicial">
+        <span class="nav-dock-logo" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="16" fill="rgba(255, 255, 255, 0.08)"/>
+            <path d="M11 10V22H18" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M23 16C23 12.686 20.314 10 17 10M23 16C23 19.314 20.314 22 17 22C13.686 22 11 19.314 11 16" stroke="#2DD4BF" stroke-width="2.2" stroke-linecap="round"/>
           </svg>
         </span>
-        <span class="nav-logo-name">Luiz Gustavo de Oliveira</span>
+        <span class="nav-dock-name">Luiz Gustavo de Oliveira</span>
       </a>
 
-      <ul class="nav-links" role="list">
+      <span class="nav-dock-separator" aria-hidden="true"></span>
+
+      <ul class="nav-dock-links" role="list">
         <li><a href="#home" class="nav-link is-active" data-page="home">Home</a></li>
         <li><a href="#work" class="nav-link" data-page="work">Projetos</a></li>
         <li><a href="#about" class="nav-link" data-page="about">Sobre</a></li>
         <li><a href="#contact" class="nav-link" data-page="contact">Contato</a></li>
       </ul>
 
-      <!-- Mobile hamburger button -->
-      <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
     </nav>
-
-    <!-- Mobile menu overlay -->
-    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu de navegação">
-      <ul class="mobile-menu-links" role="list">
-        <li><a href="#home" class="mobile-nav-link is-active" data-page="home">Home</a></li>
-        <li><a href="#work" class="mobile-nav-link" data-page="work">Work</a></li>
-        <li><a href="#about" class="mobile-nav-link" data-page="about">About</a></li>
-        <li><a href="#contact" class="mobile-nav-link" data-page="contact">Contact</a></li>
-      </ul>
-    </div>
   </header>
 
   <!-- ====================================================
-       MAIN LAYOUT — two-panel split
+       MAIN LAYOUT
   ==================================================== -->
   <main class="site-layout" role="main">
 
-    <!-- LEFT PANEL — edge-to-edge filled, stays fixed while right scrolls -->
+    <!-- PAGE: HOME (Cinematic Fullscreen Hero) -->
+    <article class="page page-home-cinematic" id="page-home" data-page="home">
+      <div class="home-cinematic-overlay" aria-hidden="true"></div>
+
+      <div class="home-hero-content">
+        <!-- Kicker -->
+        <div class="hero-kicker">
+          <span class="kicker-line" aria-hidden="true"></span>
+          <span class="kicker-text">PORTFÓLIO</span>
+        </div>
+
+        <!-- Name Heading -->
+        <h1 class="hero-title">
+          Luiz Gustavo<br />
+          de <span class="hero-title-accent">Oliveira</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="hero-subtitle">Desenvolvedor Fullstack em formação</p>
+
+        <!-- Bio description -->
+        <p class="hero-bio">
+          Movido por tecnologia, curiosidade e vontade de construir soluções digitais que realmente fazem a diferença.
+        </p>
+
+        <!-- Tech stack chips -->
+        <div class="hero-tech-chips" aria-label="Tecnologias principais">
+          <span class="tech-chip">
+            <img src="assets/node-icon.png" alt="Node.js" class="tech-chip-icon" width="16" height="16" loading="lazy" />
+            <span>Node.js</span>
+          </span>
+          <span class="tech-chip">
+            <img src="assets/tsicon.png" alt="TypeScript" class="tech-chip-icon" width="16" height="16" loading="lazy" />
+            <span>TypeScript</span>
+          </span>
+          <span class="tech-chip">
+            <img src="assets/vuejsicon.png" alt="Vue.js" class="tech-chip-icon" width="16" height="16" loading="lazy" />
+            <span>Vue.js</span>
+          </span>
+          <span class="tech-chip">
+            <img src="assets/golangicon.png" alt="Go" class="tech-chip-icon" width="16" height="16" loading="lazy" />
+            <span>Go</span>
+          </span>
+        </div>
+
+        <!-- Hero Actions: CTA button + Social Icons -->
+        <div class="hero-actions">
+          <a href="#work" class="hero-btn-primary" data-page="work" id="hero-cta-work">
+            <span>Ver projetos</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+
+          <div class="hero-social-links" aria-label="Redes sociais e contato">
+            <a href="https://github.com/lg-devhub" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub" title="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </a>
+
+            <a href="https://www.linkedin.com/in/luiz-gustavo-de-oliveira-abab43259/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+
+            <a href="https://instagram.com/acc.gustavo" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+
+            <a href="mailto:ogusta321@gmail.com" class="social-icon-btn" aria-label="Email" title="Email (ogusta321@gmail.com)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mouse Scroll Indicator (Bottom Left) -->
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <div class="mouse-icon">
+          <span class="mouse-wheel"></span>
+        </div>
+      </div>
+    </article>
+
+    <!-- PAGE: WORK (Cinematic Fullscreen Experience) -->
+    <article class="page page-work-cinematic" id="page-work" data-page="work" hidden>
+      <!-- Hero Orb Graphic Backdrop (mix-blend-mode screen for seamless transparency) -->
+      <div class="projects-orb-container" aria-hidden="true">
+        <img src="assets/orb.gif" alt="" class="projects-orb-img" />
+        <div class="projects-orb-glow"></div>
+      </div>
+
+      <!-- Top Header Area -->
+      <div class="projects-top-bar">
+        <div class="projects-header-area">
+          <div class="projects-kicker">
+            <span class="projects-kicker-line" aria-hidden="true"></span>
+            <span class="projects-kicker-text">PROJETOS</span>
+          </div>
+          <h1 class="projects-title">
+            Meus <br />
+            <span class="projects-title-accent">Projetos</span>
+          </h1>
+          <p class="projects-intro">
+            Aqui estão alguns dos projetos que desenvolvi ao longo da minha jornada, desde soluções simples até sistemas mais completos.
+          </p>
+        </div>
+      </div>
+
+      <!-- Projects Carousel Section -->
+      <div class="projects-carousel-wrapper">
+        <div class="projects-carousel-window" id="carousel-window">
+          <div class="projects-carousel-track" id="carousel-track" role="region" aria-label="Carrossel de projetos">
+            <!-- Populated dynamically by JavaScript -->
+          </div>
+        </div>
+
+        <!-- Centered Bottom Carousel Controls (<  — · ·  >) -->
+        <div class="projects-bottom-controls" aria-label="Navegação do carrossel">
+          <button class="carousel-arrow" id="carousel-prev" aria-label="Projeto anterior" title="Anterior">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+
+          <div class="carousel-pagination" id="carousel-pagination" aria-label="Indicadores de página"></div>
+
+          <button class="carousel-arrow" id="carousel-next" aria-label="Próximo projeto" title="Próximo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- LEFT PANEL — edge-to-edge filled, stays fixed while right scrolls (used on Work / About / Contact) -->
     <aside class="panel-left" aria-label="Imagem de destaque">
       <div class="panel-left-image-wrapper">
-        <img src="assets/homewallpaper.png" alt="Retrato de SEU NOME — Desenvolvedor de Software" class="panel-left-image"
+        <img src="assets/homewallpaper.png" alt="Retrato de Luiz Gustavo — Desenvolvedor de Software" class="panel-left-image"
           id="panel-left-image" loading="eager" />
         <video
           id="panel-left-video"
@@ -101,59 +236,6 @@
 
     <!-- RIGHT PANEL — independent scrollable content area -->
     <section class="panel-right" id="panel-right" aria-live="polite" aria-label="Conteúdo da página">
-
-      <!-- PAGE: HOME -->
-      <article class="page" id="page-home" data-page="home">
-
-        <!-- Top row: Profile Card + Social Links Stack side by side -->
-        <div class="home-top-row">
-          <div class="home-about-card">
-            <div class="home-about-header">
-              <img src="assets/profilepixel.jpg" alt="Foto de Luiz Gustavo" class="home-avatar" loading="lazy" />
-              <div class="home-about-info">
-                <h1 class="home-name">Luiz Gustavo de Oliveira</h1>
-                <p class="home-role">Dev. FullStack em formação</p>
-              </div>
-            </div>
-
-            <p class="home-bio">
-              Movido por código, curiosidade e vontade de construir soluções digitais
-              que realmente fazem a diferença. Com uma paixão por unir estética e
-              funcionalidade.
-            </p>
-          </div>
-
-          <ul class="home-social-stack" role="list" aria-label="Redes sociais">
-            <!-- Populated by JavaScript from portfolioData.socialLinks -->
-          </ul>
-        </div>
-
-        <!-- Latest Work section -->
-        <section class="home-latest-work" aria-labelledby="latest-work-title">
-          <div class="section-header">
-            <h2 class="section-title" id="latest-work-title">Latest Work ↓</h2>
-            <a href="#work" class="section-view-all" data-page="work" aria-label="Ver todos os projetos">View All</a>
-          </div>
-          <div class="projects-grid" id="home-projects-grid" role="list">
-            <!-- Populated by JavaScript -->
-          </div>
-        </section>
-
-      </article>
-
-      <!-- PAGE: WORK -->
-      <article class="page" id="page-work" data-page="work" hidden>
-        <header class="page-header">
-          <h1 class="page-title">Projetos</h1>
-          <p class="page-intro">
-            Meus projetos representam minha experiência prática com desenvolvimento de software,
-            explorando diferentes tecnologias, arquiteturas e soluções.
-          </p>
-        </header>
-        <div class="work-project-list" id="work-project-list" role="list">
-          <!-- Populated by JavaScript -->
-        </div>
-      </article>
 
       <!-- PAGE: ABOUT -->
       <article class="page" id="page-about" data-page="about" hidden>

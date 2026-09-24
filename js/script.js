@@ -41,33 +41,52 @@ const portfolioData = {
 
   projects: [
     {
-      id: 'golang-projects',
-      title: 'Golang Projects',
-      tagline: 'Coleção de projetos desenvolvidos em Go',
-      description: 'Repositório com projetos práticos em Go, abrangendo desde os fundamentos da linguagem até arquiteturas mais avançadas de backend.',
-      objective: 'Consolidar o aprendizado em Go através de projetos reais, explorando os principais recursos da linguagem e as melhores práticas do ecossistema backend.',
-      technologies: ['Go', 'Golang'],
+      id: 'shelfscanner',
+      title: 'ShelfScanner',
+      badge: 'Python',
+      tagline: 'Visão Computacional com IA para identificação de livros',
+      description: 'Visão computacional com inteligência artificial para identificação e busca de livros em estantes através de OCR e APIs.',
+      objective: 'Explorar visão computacional e IA aplicadas a um problema real, combinando OCR, processamento de imagens e integração com APIs externas para identificar e catalogar livros automaticamente.',
+      technologies: ['Python', 'OpenCV', 'AI', 'OCR'],
       features: [
-        'Fundamentos de Go',
-        'APIs e Serviços Web',
-        'Concorrência com Goroutines e Canais',
-        'Integração de Banco de Dados',
-        'Código Limpo',
-        'Arquitetura de Software',
-        'Melhores Práticas de Desenvolvimento Backend',
+        'Extração de texto de imagens via OCR',
+        'Processamento e análise de imagens de estantes',
+        'Consulta a APIs externas de livros',
+        'Retorno de dados estruturados (título e autor)',
+        'Integração entre visão computacional e consumo de APIs',
       ],
       year: '2026',
-      image: 'assets/golanggif.gif',
-      github: 'https://github.com/lg-devhub/GOLANG-PROJECTS',
+      image: 'assets/books.jpg',
+      github: 'https://github.com/lg-devhub/machine_learning_projects',
+      demo: '',
+    },
+    {
+      id: 'sua-casa-container',
+      title: 'Sua Casa, Seu Contêiner',
+      badge: 'HTML · CSS · JS',
+      tagline: 'Site institucional moderno e responsivo',
+      description: 'Site institucional desenvolvido com foco em responsividade, performance e experiência visual cinematográfica.',
+      objective: 'Criar uma presença digital marcante para arquitetura sustentável em contêineres, aliando estética refinada e arquitetura web fluida.',
+      technologies: ['HTML5', 'CSS3', 'JavaScript'],
+      features: [
+        'Design limpo, elegante e cinematográfico',
+        'Adaptação responsiva precisa para desktop, tablet e mobile',
+        'Transições suaves e micro-interações refinadas',
+        'Estruturação semântica e boas práticas de acessibilidade',
+      ],
+      year: '2026',
+      image: 'assets/img4.jpg',
+      github: 'https://github.com/lg-devhub',
       demo: '',
     },
     {
       id: 'catequese',
-      title: 'Sistema de Inscrições — Catequese',
-      tagline: 'Projeto de Extensão Universitária · Paróquia Sagrada Família',
-      description: 'Projeto de extensão comunitário desenvolvido em grupo como parte da grade curricular da faculdade. O sistema foi criado para a Paróquia Sagrada Família de Taubaté com o objetivo de digitalizar e controlar as inscrições para o programa de Catequese, substituindo processos manuais por uma solução web organizada e acessível.',
+      title: 'Paróquia Sagrada Família',
+      badge: 'Python',
+      tagline: 'Sistema de Inscrições para Catequese · Extensão Universitária',
+      description: 'Sistema web para digitalização e controle de inscrições para catequese com gerenciamento administrativo.',
       objective: 'Contribuir com a comunidade local através da tecnologia, oferecendo à paróquia uma ferramenta simples e eficiente para gerenciar candidatos inscritos na catequese.',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'MySQL', 'Python/Flask'],
+      technologies: ['Python', 'Flask', 'MySQL', 'API'],
       features: [
         'Cadastro e inscrição online de catequizandos',
         'Painel administrativo para controle de inscrições',
@@ -81,42 +100,62 @@ const portfolioData = {
       demo: '',
     },
     {
+      id: 'snake',
+      title: 'Snake Game',
+      badge: 'JavaScript',
+      tagline: 'Jogo clássico desenvolvido com Canvas e Sprites',
+      description: 'Recriação do clássico jogo da cobrinha em JavaScript puro com renderização em Canvas, animações e sprites.',
+      objective: 'Consolidar conceitos fundamentais de game loop, detecção de colisões em grade, física simples e renderização 2D no navegador.',
+      technologies: ['JavaScript', 'HTML5 Canvas', 'Game Dev'],
+      features: [
+        'Game loop nativo com requestAnimationFrame',
+        'Sistema de colisão, pontuação e recorde dinâmico',
+        'Sprites gráficos personalizados e animação fluida',
+        'Controles reativos por teclado e touch',
+      ],
+      year: '2026',
+      image: 'assets/img1.jpg',
+      github: 'https://github.com/lg-devhub',
+      demo: '',
+    },
+    {
+      id: 'golang-projects',
+      title: 'Golang Projects',
+      badge: 'Go',
+      tagline: 'Coleção de projetos desenvolvidos em Go',
+      description: 'Repositório com projetos práticos em Go, explorando concorrência com Goroutines, channels e microsserviços.',
+      objective: 'Consolidar o aprendizado em Go através de projetos reais, explorando os principais recursos da linguagem e as melhores práticas do ecossistema backend.',
+      technologies: ['Go', 'Goroutines', 'REST API'],
+      features: [
+        'Fundamentos de Go e tipagem forte',
+        'APIs e Serviços Web com alto throughput',
+        'Concorrência com Goroutines e Canais',
+        'Integração de Banco de Dados',
+        'Código Limpo e Melhores Práticas',
+      ],
+      year: '2026',
+      image: 'assets/golanggif.gif',
+      github: 'https://github.com/lg-devhub/GOLANG-PROJECTS',
+      demo: '',
+    },
+    {
       id: 'nodejs-projects',
       title: 'Node.js Projects',
+      badge: 'TypeScript',
       tagline: 'Projetos em JavaScript e TypeScript com Node.js',
-      description: 'Repositório com projetos práticos desenvolvidos em JavaScript e TypeScript utilizando Node.js. Foco na construção de APIs REST robustas, gerenciamento de rotas, middlewares e integração com bancos de dados.',
+      description: 'Construção de APIs REST robustas com Node.js e TypeScript, gerenciamento de rotas, middlewares e banco de dados.',
       objective: 'Aprofundar o domínio do ecossistema Node.js, explorando boas práticas de desenvolvimento backend com JavaScript e TypeScript.',
-      technologies: ['Node.js', 'JavaScript', 'TypeScript'],
+      technologies: ['Node.js', 'TypeScript', 'Express'],
       features: [
-        'APIs REST com Node.js',
-        'Rotas e middlewares',
-        'JavaScript e TypeScript',
+        'APIs REST com Node.js e Express',
+        'Rotas, middlewares e autenticação JWT',
+        'JavaScript e TypeScript com tipagem estrita',
         'Integração com Banco de Dados',
-        'Autenticação e autorização',
         'Boas práticas de desenvolvimento backend',
       ],
       year: '2026',
       image: 'assets/node.png',
       github: 'https://github.com/lg-devhub/nodejs-projects',
-      demo: '',
-    },
-    {
-      id: 'shelfscanner',
-      title: 'ShelfScanner',
-      tagline: 'Visão Computacional com IA para identificação de livros',
-      description: 'ShelfScanner é um projeto de visão computacional baseado em inteligência artificial que extrai texto de imagens de estantes de livros utilizando OCR e consulta APIs externas para obter informações sobre os livros. O sistema integra processamento de imagens, reconhecimento de texto e consumo de APIs para identificar livros e retornar dados estruturados como título e autor.',
-      objective: 'Explorar visão computacional e IA aplicadas a um problema real, combinando OCR, processamento de imagens e integração com APIs externas para identificar e catalogar livros automaticamente.',
-      technologies: ['Python', 'OCR', 'Computer Vision', 'AI'],
-      features: [
-        'Extração de texto de imagens via OCR',
-        'Processamento e análise de imagens de estantes',
-        'Consulta a APIs externas de livros',
-        'Retorno de dados estruturados (título e autor)',
-        'Integração entre visão computacional e consumo de APIs',
-      ],
-      year: '2026',
-      image: 'assets/books.jpg',
-      github: 'https://github.com/lg-devhub/machine_learning_projects',
       demo: '',
     },
   ],
@@ -194,6 +233,11 @@ const dom = {
   homeProjectsGrid: document.getElementById('home-projects-grid'),
   socialLinksList: document.querySelector('.home-social-stack'),
   workProjectList: document.getElementById('work-project-list'),
+  carouselWindow: document.getElementById('carousel-window'),
+  carouselTrack: document.getElementById('carousel-track'),
+  carouselPrev: document.getElementById('carousel-prev'),
+  carouselNext: document.getElementById('carousel-next'),
+  carouselPagination: document.getElementById('carousel-pagination'),
   skillsGrid: document.getElementById('skills-grid'),
   timeline: document.getElementById('timeline'),
   contactInfoGrid: document.getElementById('contact-info-grid'),
@@ -245,10 +289,18 @@ function navigateTo(pageId) {
   // Update URL hash without reloading
   history.pushState(null, '', `#${pageId}`);
 
+  document.body.dataset.activePage = pageId;
   showPage(pageId);
   updateNavActiveState(pageId);
   updateLeftPanelImage(pageId);
   closeMobileMenu();
+
+  if (pageId === 'work' && typeof updateCarouselPosition === 'function') {
+    requestAnimationFrame(() => {
+      renderCarouselPagination();
+      updateCarouselPosition();
+    });
+  }
 
   // Scroll the right panel back to top on page change
   const panelRight = document.getElementById('panel-right');
@@ -270,7 +322,7 @@ function updateNavActiveState(pageId) {
   });
 }
 
-// Intercept all navigation clicks — nav links, mobile links, and "View All" link
+// Intercept all navigation clicks — nav links, mobile links, brand, and CTA
 function bindNavigationClicks() {
   const allNavLinks = [
     ...dom.navLinks,
@@ -283,6 +335,24 @@ function bindNavigationClicks() {
       navigateTo(link.dataset.page);
     });
   });
+
+  // Nav brand logo link to home
+  const navBrand = document.querySelector('.nav-dock-brand');
+  if (navBrand) {
+    navBrand.addEventListener('click', e => {
+      e.preventDefault();
+      navigateTo('home');
+    });
+  }
+
+  // Hero CTA button "Ver projetos"
+  const heroCtaWork = document.getElementById('hero-cta-work');
+  if (heroCtaWork) {
+    heroCtaWork.addEventListener('click', e => {
+      e.preventDefault();
+      navigateTo('work');
+    });
+  }
 
   // "View All" link on Home
   if (dom.viewAllLink) {
@@ -305,9 +375,16 @@ function bindNavigationClicks() {
 // Handle browser back/forward
 window.addEventListener('popstate', () => {
   const page = getActivePage();
+  document.body.dataset.activePage = page;
   showPage(page);
   updateNavActiveState(page);
   updateLeftPanelImage(page);
+  if (page === 'work' && typeof updateCarouselPosition === 'function') {
+    requestAnimationFrame(() => {
+      renderCarouselPagination();
+      updateCarouselPosition();
+    });
+  }
 });
 
 
@@ -497,41 +574,215 @@ function renderHomeProjects() {
 
 
 /* ============================================================
-   6. WORK PAGE — project list rows
+   6. WORK PAGE — Cinematic Projects Carousel
    ============================================================ */
-function renderWorkProjects() {
-  if (!dom.workProjectList) return;
+let carouselCurrentIndex = 0;
+let carouselTouchStartX = 0;
+let carouselTouchStartY = 0;
+let carouselIsSwiping = false;
 
-  dom.workProjectList.innerHTML = portfolioData.projects
+function getCarouselVisibleCount() {
+  const width = window.innerWidth;
+  if (width >= 1200) return 4;
+  if (width >= 900) return 3;
+  if (width >= 640) return 2;
+  return 1;
+}
+
+function getCarouselMaxIndex() {
+  const visible = getCarouselVisibleCount();
+  return Math.max(0, portfolioData.projects.length - visible);
+}
+
+function updateCarouselPosition() {
+  if (!dom.carouselTrack) return;
+  const maxIdx = getCarouselMaxIndex();
+  if (carouselCurrentIndex > maxIdx) {
+    carouselCurrentIndex = maxIdx;
+  }
+  if (carouselCurrentIndex < 0) {
+    carouselCurrentIndex = 0;
+  }
+
+  const cards = dom.carouselTrack.children;
+  if (cards.length === 0) return;
+
+  const firstCard = cards[0];
+  const cardRect = firstCard.getBoundingClientRect();
+  const cardWidth = cardRect.width;
+  const computedGap = parseFloat(window.getComputedStyle(dom.carouselTrack).gap) || 22;
+
+  const offset = carouselCurrentIndex * (cardWidth + computedGap);
+  dom.carouselTrack.style.transform = `translateX(-${offset}px)`;
+
+  // Update arrow buttons
+  if (dom.carouselPrev) {
+    dom.carouselPrev.disabled = carouselCurrentIndex <= 0;
+    dom.carouselPrev.classList.toggle('is-disabled', carouselCurrentIndex <= 0);
+  }
+  if (dom.carouselNext) {
+    dom.carouselNext.disabled = carouselCurrentIndex >= maxIdx;
+    dom.carouselNext.classList.toggle('is-disabled', carouselCurrentIndex >= maxIdx);
+  }
+
+  // Update pagination dots
+  if (dom.carouselPagination) {
+    const dots = dom.carouselPagination.querySelectorAll('.pagination-dot');
+    dots.forEach((dot, idx) => {
+      const isActive = idx === carouselCurrentIndex;
+      dot.classList.toggle('is-active', isActive);
+      dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+  }
+}
+
+function renderCarouselPagination() {
+  if (!dom.carouselPagination) return;
+  const maxIdx = getCarouselMaxIndex();
+
+  let dotsHtml = '';
+  for (let i = 0; i <= maxIdx; i++) {
+    const isActive = i === carouselCurrentIndex;
+    dotsHtml += `
+      <button
+        class="pagination-dot ${isActive ? 'is-active' : ''}"
+        data-slide-index="${i}"
+        aria-label="Ir para slide ${i + 1}"
+        aria-selected="${isActive ? 'true' : 'false'}"
+        role="tab"
+      ></button>
+    `;
+  }
+  dom.carouselPagination.innerHTML = dotsHtml;
+
+  dom.carouselPagination.querySelectorAll('.pagination-dot').forEach(dot => {
+    dot.addEventListener('click', () => {
+      carouselCurrentIndex = parseInt(dot.dataset.slideIndex, 10);
+      updateCarouselPosition();
+    });
+  });
+}
+
+function renderWorkProjects() {
+  if (!dom.carouselTrack) return;
+
+  dom.carouselTrack.innerHTML = portfolioData.projects
     .map(project => `
-      <div
-        class="work-project-row"
-        role="listitem"
-        tabindex="0"
+      <article
+        class="project-carousel-card"
         data-project-id="${project.id}"
-        aria-label="Ver projeto ${project.title}"
+        tabindex="0"
+        role="group"
+        aria-label="${project.title}"
       >
-        <div class="work-project-main">
-          <h2 class="work-project-name">${project.title}</h2>
-          <p class="work-project-tagline">${project.tagline}</p>
-          <div class="work-project-tech">
-            ${project.technologies.map(t => `<span class="tech-tag">${t}</span>`).join('')}
+        <!-- Card Image Header -->
+        <div class="project-card-image-box">
+          <img src="${project.image}" alt="${project.title}" class="project-card-img" loading="lazy" />
+          <div class="project-card-overlay"></div>
+          ${project.badge ? `<span class="project-card-badge">${project.badge}</span>` : ''}
+        </div>
+
+        <!-- Card Body -->
+        <div class="project-card-body">
+          <h3 class="project-card-title">${project.title}</h3>
+          <p class="project-card-description">${project.description}</p>
+
+          <div class="project-card-footer">
+            <div class="project-card-tags">
+              ${project.technologies.slice(0, 3).map(tech => `<span class="project-tag">${tech}</span>`).join('')}
+            </div>
+            <button class="project-card-action-btn" aria-label="Ver detalhes de ${project.title}">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
           </div>
         </div>
-        <div class="work-project-year">${project.year}</div>
-      </div>
+      </article>
     `)
     .join('');
 
-  dom.workProjectList.querySelectorAll('.work-project-row').forEach(row => {
-    row.addEventListener('click', () => openProjectModal(row.dataset.projectId));
-    row.addEventListener('keydown', e => {
+  // Click & keyboard handlers to open modal
+  dom.carouselTrack.querySelectorAll('.project-carousel-card').forEach(card => {
+    card.addEventListener('click', () => openProjectModal(card.dataset.projectId));
+    card.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        openProjectModal(row.dataset.projectId);
+        openProjectModal(card.dataset.projectId);
       }
     });
   });
+
+  renderCarouselPagination();
+  updateCarouselPosition();
+
+  // Prev / Next button listeners (bind only once)
+  if (dom.carouselPrev && !dom.carouselPrev.dataset.bound) {
+    dom.carouselPrev.dataset.bound = 'true';
+    dom.carouselPrev.addEventListener('click', () => {
+      if (carouselCurrentIndex > 0) {
+        carouselCurrentIndex--;
+        updateCarouselPosition();
+      }
+    });
+  }
+
+  if (dom.carouselNext && !dom.carouselNext.dataset.bound) {
+    dom.carouselNext.dataset.bound = 'true';
+    dom.carouselNext.addEventListener('click', () => {
+      const maxIdx = getCarouselMaxIndex();
+      if (carouselCurrentIndex < maxIdx) {
+        carouselCurrentIndex++;
+        updateCarouselPosition();
+      }
+    });
+  }
+
+  // Touch Swipe on carousel track for mobile & tablet
+  if (dom.carouselTrack && !dom.carouselTrack.dataset.boundTouch) {
+    dom.carouselTrack.dataset.boundTouch = 'true';
+
+    dom.carouselTrack.addEventListener('touchstart', e => {
+      carouselTouchStartX = e.changedTouches[0].screenX;
+      carouselTouchStartY = e.changedTouches[0].screenY;
+      carouselIsSwiping = true;
+    }, { passive: true });
+
+    dom.carouselTrack.addEventListener('touchend', e => {
+      if (!carouselIsSwiping) return;
+      carouselIsSwiping = false;
+      const touchEndX = e.changedTouches[0].screenX;
+      const touchEndY = e.changedTouches[0].screenY;
+      const diffX = touchEndX - carouselTouchStartX;
+      const diffY = touchEndY - carouselTouchStartY;
+
+      // Ensure horizontal swipe intent
+      if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
+        const maxIdx = getCarouselMaxIndex();
+        if (diffX < 0 && carouselCurrentIndex < maxIdx) {
+          carouselCurrentIndex++;
+          updateCarouselPosition();
+        } else if (diffX > 0 && carouselCurrentIndex > 0) {
+          carouselCurrentIndex--;
+          updateCarouselPosition();
+        }
+      }
+    }, { passive: true });
+  }
+
+  // Window resize handler (debounced)
+  if (!window._carouselResizeBound) {
+    window._carouselResizeBound = true;
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        renderCarouselPagination();
+        updateCarouselPosition();
+      }, 100);
+    });
+  }
 }
 
 
@@ -824,6 +1075,7 @@ function bindFormEvents() {
    11. MOBILE MENU
    ============================================================ */
 function openMobileMenu() {
+  if (!dom.mobileMenu || !dom.hamburger) return;
   dom.mobileMenu.classList.add('is-open');
   dom.hamburger.classList.add('is-open');
   dom.hamburger.setAttribute('aria-expanded', 'true');
@@ -831,6 +1083,7 @@ function openMobileMenu() {
 }
 
 function closeMobileMenu() {
+  if (!dom.mobileMenu || !dom.hamburger) return;
   dom.mobileMenu.classList.remove('is-open');
   dom.hamburger.classList.remove('is-open');
   dom.hamburger.setAttribute('aria-expanded', 'false');
@@ -838,13 +1091,15 @@ function closeMobileMenu() {
 }
 
 function bindMobileMenuEvents() {
+  if (!dom.hamburger || !dom.mobileMenu) return;
+
   dom.hamburger.addEventListener('click', () => {
     const isOpen = dom.mobileMenu.classList.contains('is-open');
     isOpen ? closeMobileMenu() : openMobileMenu();
   });
 
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && dom.mobileMenu.classList.contains('is-open')) {
+    if (e.key === 'Escape' && dom.mobileMenu && dom.mobileMenu.classList.contains('is-open')) {
       closeMobileMenu();
     }
   });
@@ -856,6 +1111,7 @@ function bindMobileMenuEvents() {
    ============================================================ */
 function init() {
   const initialPage = getActivePage();
+  document.body.dataset.activePage = initialPage;
 
   // Render all dynamic content once
   renderSocialLinks();
