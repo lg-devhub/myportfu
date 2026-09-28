@@ -61,25 +61,6 @@ const portfolioData = {
       demo: '',
     },
     {
-      id: 'sua-casa-container',
-      title: 'Sua Casa, Seu Contêiner',
-      badge: 'HTML · CSS · JS',
-      tagline: 'Site institucional moderno e responsivo',
-      description: 'Site institucional desenvolvido com foco em responsividade, performance e experiência visual cinematográfica.',
-      objective: 'Criar uma presença digital marcante para arquitetura sustentável em contêineres, aliando estética refinada e arquitetura web fluida.',
-      technologies: ['HTML5', 'CSS3', 'JavaScript'],
-      features: [
-        'Design limpo, elegante e cinematográfico',
-        'Adaptação responsiva precisa para desktop, tablet e mobile',
-        'Transições suaves e micro-interações refinadas',
-        'Estruturação semântica e boas práticas de acessibilidade',
-      ],
-      year: '2026',
-      image: 'assets/img4.jpg',
-      github: 'https://github.com/lg-devhub',
-      demo: '',
-    },
-    {
       id: 'catequese',
       title: 'Paróquia Sagrada Família',
       badge: 'Python',
@@ -97,25 +78,6 @@ const portfolioData = {
       year: '2026',
       image: 'assets/pomba.jpg',
       github: 'https://github.com/lg-devhub/EXTENSION_PROJECTS',
-      demo: '',
-    },
-    {
-      id: 'snake',
-      title: 'Snake Game',
-      badge: 'JavaScript',
-      tagline: 'Jogo clássico desenvolvido com Canvas e Sprites',
-      description: 'Recriação do clássico jogo da cobrinha em JavaScript puro com renderização em Canvas, animações e sprites.',
-      objective: 'Consolidar conceitos fundamentais de game loop, detecção de colisões em grade, física simples e renderização 2D no navegador.',
-      technologies: ['JavaScript', 'HTML5 Canvas', 'Game Dev'],
-      features: [
-        'Game loop nativo com requestAnimationFrame',
-        'Sistema de colisão, pontuação e recorde dinâmico',
-        'Sprites gráficos personalizados e animação fluida',
-        'Controles reativos por teclado e touch',
-      ],
-      year: '2026',
-      image: 'assets/img1.jpg',
-      github: 'https://github.com/lg-devhub',
       demo: '',
     },
     {
@@ -167,7 +129,7 @@ const portfolioData = {
     },
     {
       group: 'Back-End',
-      items: ['TypeScript', 'Node.JS', 'Golang (GO)', 'Python', 'Flask', 'FastAPI', 'Java'],
+      items: ['TypeScript', 'Node.js', 'Golang (GO)', 'Python', 'Flask', 'FastAPI', 'Java'],
     },
     {
       group: 'Infraestrutura',
@@ -305,13 +267,24 @@ function navigateTo(pageId) {
   // Scroll the right panel back to top on page change
   const panelRight = document.getElementById('panel-right');
   if (panelRight) panelRight.scrollTop = 0;
+
+  // Scroll the about panel back to top on page change
+  const aboutPanel = document.getElementById('about-right-panel');
+  if (aboutPanel) aboutPanel.scrollTop = 0;
 }
 
 function showPage(pageId) {
+  // Standard .page elements (home cinematic, work cinematic, contact, placeholder)
   dom.allPages.forEach(page => {
     const isTarget = page.dataset.page === pageId;
     page.hidden = !isTarget;
   });
+
+  // The fullscreen about article lives outside .panel-right and uses data-page="about"
+  const aboutCinematic = document.getElementById('page-about');
+  if (aboutCinematic) {
+    aboutCinematic.hidden = pageId !== 'about';
+  }
 }
 
 function updateNavActiveState(pageId) {
@@ -387,6 +360,114 @@ window.addEventListener('popstate', () => {
   }
 });
 
+// Controle de áudio e ciclo de vida do vídeo na aba Contato
+function setContactAudio(enable, restart = false) {
+  const contactBgVideo = document.getElementById('contact-bg-video');
+  const soundBtn = document.getElementById('contact-sound-btn');
+  if (!contactBgVideo) return;
+
+  if (enable) {
+    if (restart) {
+      try { contactBgVideo.currentTime = 0; } catch (e) {}
+    }
+    contactBgVideo.muted = false;
+    contactBgVideo.volume = 0.4;
+    const playPromise = contactBgVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        if (soundBtn) {
+          soundBtn.classList.remove('is-muted');
+          const label = soundBtn.querySelector('.contact-sound-label');
+          if (label) label.textContent = 'Som';
+        }
+      }).catch(err => {
+        // Se a política do navegador bloquear som automático sem clique prévio (ex: no F5)
+        contactBgVideo.muted = true;
+        contactBgVideo.play().catch(() => {});
+        if (soundBtn) {
+          soundBtn.classList.add('is-muted');
+          const label = soundBtn.querySelector('.contact-sound-label');
+          if (label) label.textContent = 'Ativar som';
+        }
+      });
+    }
+  } else {
+    contactBgVideo.muted = true;
+    if (restart) {
+      contactBgVideo.pause();
+      try { contactBgVideo.currentTime = 0; } catch (e) {}
+    }
+    if (soundBtn) {
+      soundBtn.classList.add('is-muted');
+      const label = soundBtn.querySelector('.contact-sound-label');
+      if (label) label.textContent = 'Ativar som';
+    }
+  }
+}
+
+// Inicializar botão de som e desbloqueio em qualquer interação após F5
+function initContactSound() {
+  const soundBtn = document.getElementById('contact-sound-btn');
+  if (soundBtn) {
+    soundBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const contactBgVideo = document.getElementById('contact-bg-video');
+      if (!contactBgVideo) return;
+      if (contactBgVideo.muted) {
+        contactBgVideo.muted = false;
+        contactBgVideo.volume = 0.4;
+        contactBgVideo.play().then(() => {
+          soundBtn.classList.remove('is-muted');
+          const label = soundBtn.querySelector('.contact-sound-label');
+          if (label) label.textContent = 'Som';
+        }).catch(() => {});
+      } else {
+        contactBgVideo.muted = true;
+        soundBtn.classList.add('is-muted');
+        const label = soundBtn.querySelector('.contact-sound-label');
+        if (label) label.textContent = 'Ativar som';
+      }
+    });
+  }
+
+  // No F5, o vídeo toca mudo (atributo muted no HTML).
+  // Na primeira interação do usuário, desmuta automaticamente.
+  const unlockEvents = ['pointerdown', 'keydown', 'touchstart'];
+  function unlockAudio() {
+    const contactBgVideo = document.getElementById('contact-bg-video');
+    if (!contactBgVideo) return;
+    if (document.body.dataset.activePage === 'contact' && contactBgVideo.muted) {
+      contactBgVideo.muted = false;
+      contactBgVideo.volume = 0.4;
+      contactBgVideo.play().then(() => {
+        if (soundBtn) {
+          soundBtn.classList.remove('is-muted');
+          const label = soundBtn.querySelector('.contact-sound-label');
+          if (label) label.textContent = 'Som';
+        }
+        // Remover listeners após desbloquear com sucesso
+        unlockEvents.forEach(evt => window.removeEventListener(evt, unlockAudio));
+      }).catch(() => {
+        // Se falhar de novo, mantém mudo e tenta na próxima interação
+        contactBgVideo.muted = true;
+      });
+    }
+  }
+  unlockEvents.forEach(evt => {
+    window.addEventListener(evt, unlockAudio, { passive: true });
+  });
+}
+
+// Reiniciar wallpaper de vídeo ao focar na aba e pausar/reiniciar ao sair
+document.addEventListener('visibilitychange', () => {
+  const isContact = document.body.dataset.activePage === 'contact';
+  if (document.hidden) {
+    setContactAudio(false, true);
+  } else if (isContact) {
+    setContactAudio(true, true);
+  }
+});
+
 
 /* ============================================================
    4. LEFT PANEL IMAGE
@@ -397,29 +478,29 @@ function updateLeftPanelImage(pageId) {
   const playPauseBtn = document.getElementById('panel-video-playpause');
 
   if (pageId === 'contact') {
-    // Show video, hide image
-    if (dom.panelLeftImage) {
-      dom.panelLeftImage.style.opacity = '0';
-    }
+    // Reiniciar e reproduzir vídeo fullscreen com som desde o início (tempo 0)
+    setContactAudio(true, true);
+
+    // Parar e ocultar vídeo antigo do painel lateral
     if (video) {
-      video.classList.add('is-visible');
-      video.muted = false;
-      video.volume = 0.4;
-      video.play();
+      video.classList.remove('is-visible');
+      video.pause();
+      try { video.currentTime = 0; } catch (e) {}
     }
-    // Show play/pause button
     if (playPauseBtn) {
-      playPauseBtn.hidden = false;
-      syncPlayPauseIcon(video, playPauseBtn);
+      playPauseBtn.hidden = true;
     }
     return;
   }
 
-  // Hide video and play/pause button, show image
+  // Ao sair de Contato: Pausar, silenciar e reiniciar tempo para 0
+  setContactAudio(false, true);
+
+  // Ocultar vídeo do painel lateral e pausar
   if (video) {
     video.classList.remove('is-visible');
     video.pause();
-    video.currentTime = 0;
+    try { video.currentTime = 0; } catch (e) {}
   }
   if (playPauseBtn) {
     playPauseBtn.hidden = true;
@@ -787,12 +868,28 @@ function renderWorkProjects() {
 
 
 /* ============================================================
-   7. ABOUT PAGE — skills + timeline
+   7. ABOUT PAGE — render skills into new cinematic layout
    ============================================================ */
-function renderSkills() {
-  if (!dom.skillsGrid) return;
+function renderAboutStack() {
+  const grid = document.getElementById('about-stack-grid');
+  if (!grid) return;
 
-  dom.skillsGrid.innerHTML = portfolioData.skills
+  grid.innerHTML = portfolioData.skills
+    .map(group => `
+      <div class="about-stack-group">
+        <p class="about-stack-group-name">${group.group}</p>
+        ${group.items.map(item => `<span class="about-stack-item">${item}</span>`).join('')}
+      </div>
+    `)
+    .join('');
+}
+
+// Keep legacy renderSkills in case anything references the old skills-grid
+function renderSkills() {
+  const grid = document.getElementById('skills-grid');
+  if (!grid) return;
+
+  grid.innerHTML = portfolioData.skills
     .map(group => `
       <div class="skills-group">
         <p class="skills-group-name">${group.group}</p>
@@ -805,7 +902,7 @@ function renderSkills() {
 function renderTimeline() {
   if (!dom.timeline) return;
 
-  dom.timeline.innerHTML = portfolioData.experience
+  dom.timeline.innerHTML = (portfolioData.experience?.timeline || [])
     .map(entry => `
       <div class="timeline-entry">
         <p class="timeline-period">${entry.period}</p>
@@ -831,6 +928,13 @@ function renderContactInfo() {
     portfolioData.socialLinks.map(l => [l.label.toLowerCase(), l.url])
   );
 
+  const contactIcons = {
+    email: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>`,
+    github: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>`,
+    linkedin: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>`,
+    localização: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>`,
+  };
+
   const contactItems = [
     { label: 'Email', value: email, href: `mailto:${email}` },
     { label: 'GitHub', value: github?.replace('https://', '') || '', href: github || '#' },
@@ -841,7 +945,8 @@ function renderContactInfo() {
   dom.contactInfoGrid.innerHTML = contactItems
     .map(item => `
       <div class="contact-info-item">
-        <p class="contact-info-label">${item.label}</p>
+        <div class="contact-info-icon">${contactIcons[item.label.toLowerCase()] || ''}</div>
+        <p class="contact-info-label">${item.label.toUpperCase()}</p>
         ${item.href
         ? `<a class="contact-info-value" href="${item.href}" ${item.href.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''}>${item.value}</a>`
         : `<p class="contact-info-value">${item.value}</p>`
@@ -1117,6 +1222,7 @@ function init() {
   renderSocialLinks();
   renderHomeProjects();
   renderWorkProjects();
+  renderAboutStack();
   renderSkills();
   renderTimeline();
   renderContactInfo();
@@ -1131,6 +1237,7 @@ function init() {
   bindModalEvents();
   bindFormEvents();
   bindMobileMenuEvents();
+  initContactSound();
   initVideoPlayPause();
   initEmailJS();
 }

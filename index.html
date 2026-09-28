@@ -29,27 +29,32 @@
   ==================================================== -->
   <header class="site-dock-wrapper" role="banner">
     <nav class="nav-dock" role="navigation" aria-label="Navegação principal">
-
-      <a href="#home" class="nav-dock-brand" data-page="home" aria-label="Ir para página inicial">
-        <span class="nav-dock-logo" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-            <rect width="32" height="32" rx="16" fill="rgba(255, 255, 255, 0.08)"/>
-            <path d="M11 10V22H18" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M23 16C23 12.686 20.314 10 17 10M23 16C23 19.314 20.314 22 17 22C13.686 22 11 19.314 11 16" stroke="#2DD4BF" stroke-width="2.2" stroke-linecap="round"/>
-          </svg>
-        </span>
-        <span class="nav-dock-name">Luiz Gustavo de Oliveira</span>
-      </a>
-
-      <span class="nav-dock-separator" aria-hidden="true"></span>
-
       <ul class="nav-dock-links" role="list">
-        <li><a href="#home" class="nav-link is-active" data-page="home">Home</a></li>
-        <li><a href="#work" class="nav-link" data-page="work">Projetos</a></li>
-        <li><a href="#about" class="nav-link" data-page="about">Sobre</a></li>
-        <li><a href="#contact" class="nav-link" data-page="contact">Contato</a></li>
+        <li>
+          <a href="#home" class="nav-link is-active" data-page="home">
+            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#work" class="nav-link" data-page="work">
+            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span class="nav-text">Projetos</span>
+          </a>
+        </li>
+        <li>
+          <a href="#about" class="nav-link" data-page="about">
+            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="nav-text">Sobre</span>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="nav-link" data-page="contact">
+            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span class="nav-text">Contato</span>
+          </a>
+        </li>
       </ul>
-
     </nav>
   </header>
 
@@ -61,6 +66,16 @@
     <!-- PAGE: HOME (Cinematic Fullscreen Hero) -->
     <article class="page page-home-cinematic" id="page-home" data-page="home">
       <div class="home-cinematic-overlay" aria-hidden="true"></div>
+
+      <!-- Botão Baixar Currículo (Canto Superior Direito) -->
+      <a href="assets/Currículo-Luiz-Gustavo-de-Oliveira.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume-download" id="btn-resume-download" aria-label="Abrir Currículo em nova aba">
+        <svg class="btn-resume-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        <span>Baixar Currículo</span>
+      </a>
 
       <div class="home-hero-content">
         <!-- Kicker -->
@@ -237,174 +252,288 @@
     <!-- RIGHT PANEL — independent scrollable content area -->
     <section class="panel-right" id="panel-right" aria-live="polite" aria-label="Conteúdo da página">
 
-      <!-- PAGE: ABOUT -->
-      <article class="page" id="page-about" data-page="about" hidden>
-        <header class="page-header">
-          <h1 class="page-title">Sobre</h1>
-        </header>
+      <!-- PAGE: ABOUT (placeholder — actual article is fullscreen, defined outside panels) -->
+      <article class="page" id="page-about-placeholder" data-page="about-inner" hidden aria-hidden="true"></article>
 
-        <div class="about-bio">
-          <p>Desenvolvedor Full Stack em formação, com Técnico em Desenvolvimento de Sistemas pelo SENAI e atualmente cursando Análise e Desenvolvimento de Sistemas.</p>
-          <p>Tenho experiência profissional em Tecnologia da Informação, adquirida durante minha atuação em seções de TI do Exército Brasileiro, onde trabalhei com suporte técnico, manutenção de hardware e software, equipamentos de vigilância e atendimento às demandas dos usuários.</p>
-          <p>Meu foco está no desenvolvimento de software, Machine Learning e na construção de aplicações web, utilizando tecnologias como Python, TypeScript, JavaScript, Node.js, React, Angular e Go.</p>
-          <p>Durante minha formação, venho desenvolvendo projetos acadêmicos e pessoais envolvendo desenvolvimento Full Stack, desenvolvimento de APIs REST, integração entre aplicações, bancos de dados, lógica de programação, programação orientada a objetos e versionamento de código com Git e GitHub.</p>
+      <!-- PAGE: CONTACT (Cinematic Fullscreen Experience) -->
+      <article class="page page-contact-cinematic" id="page-contact" data-page="contact" hidden>
+        <!-- Fullscreen Minecraft Background Video / Wallpaper -->
+        <video class="contact-cinematic-video" id="contact-bg-video" src="assets/videominecraft.mp4" muted loop playsinline aria-hidden="true"></video>
+        <div class="contact-cinematic-overlay" aria-hidden="true"></div>
 
-          <div class="about-tech-highlight">
-            <h3 class="about-tech-highlight-title">Tecnologias e conhecimentos:</h3>
-            <ul class="about-tech-pills">
-              <li>Python</li>
-              <li>TypeScript</li>
-              <li>JavaScript</li>
-              <li>Node.js</li>
-              <li>Go</li>
-              <li>React</li>
-              <li>Angular</li>
-              <li>APIs REST</li>
-              <li>Git e GitHub</li>
-              <li>SQL e Bancos de Dados</li>
-              <li>Desenvolvimento Web</li>
-              <li>Programação Orientada a Objetos</li>
-              <li>Desenvolvimento Full Stack</li>
-            </ul>
-          </div>
+        <!-- Botão de controle de som do wallpaper -->
+        <button class="contact-sound-btn is-muted" id="contact-sound-btn" aria-label="Ativar ou desativar som do wallpaper" title="Ativar/desativar som">
+          <svg class="sound-icon-on" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <svg class="sound-icon-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+          <span class="contact-sound-label">Ativar som</span>
+        </button>
 
-          <p>Minha experiência profissional também contribuiu para o desenvolvimento de competências como resolução de problemas, organização, responsabilidade, trabalho em equipe e atendimento a demandas em ambiente profissional.</p>
-          <p>Atualmente busco uma oportunidade de Estágio ou Desenvolvedor Júnior na área de Desenvolvimento de Software, onde possa aplicar meus conhecimentos, contribuir com a equipe e continuar evoluindo profissionalmente como desenvolvedor.</p>
-        </div>
+        <div class="contact-cinematic-inner">
+          <header class="contact-cinematic-header">
+            <h1 class="contact-cinematic-title">Vamos Conversar...</h1>
+          </header>
 
-        <!-- Skills section -->
-        <section class="about-section" aria-labelledby="stack-title">
-          <h2 class="about-section-title" id="stack-title">Minha Stack</h2>
-          <div class="skills-grid" id="skills-grid">
-            <!-- Populated by JavaScript from portfolioData.skills -->
-          </div>
-        </section>
-
-        <!-- Two columns: Experiência & Formação -->
-        <div class="about-two-columns">
-
-          <!-- Coluna 1: Experiência -->
-          <section class="about-section about-card-col" aria-labelledby="experience-title">
-            <h2 class="about-section-title" id="experience-title">Experiência</h2>
-            <div class="about-entry">
-              <div class="about-entry-header">
-                <div class="about-entry-img-wrapper">
-                  <img src="assets/exercito.png" alt="Exército Brasileiro" class="about-entry-img" loading="lazy" />
-                </div>
-                <div class="about-entry-info">
-                  <h3 class="about-entry-title">Militar - Exército Brasileiro</h3>
-                  <p class="about-entry-subtitle">Atuação em Seção de Informática, Almoxarifado e Secretaria</p>
-                </div>
-              </div>
-              <ul class="about-entry-list">
-                <li>Atuação na Seção de Informática, realizando manutenção de hardware e software, equipamentos de vigilância, suporte técnico aos usuários e atendimento às demandas relacionadas aos recursos de Tecnologia da Informação.</li>
-                <li>Realização de atividades de manutenção, configuração e suporte de equipamentos de informática, contribuindo para o funcionamento dos recursos tecnológicos da unidade.</li>
-                <li>Atuação no Almoxarifado, realizando controle, organização e movimentação de materiais e equipamentos.</li>
-                <li>Apoio às atividades da Secretaria do Batalhão, auxiliando no despacho, recebimento, conferência e correção de documentações administrativas.</li>
-                <li>Organização e controle de documentos e informações, garantindo maior precisão e organização dos processos internos.</li>
-                <li>Desenvolvimento de experiência profissional em ambiente organizacional, com atuação em suporte técnico, resolução de problemas, organização, responsabilidade e atendimento às demandas internas.</li>
-              </ul>
+          <!-- Contact form -->
+          <form class="contact-form" id="contact-form" novalidate aria-label="Formulário de contato">
+            <div class="form-group">
+              <label for="input-name" class="form-label">Seu Nome</label>
+              <input type="text" id="input-name" name="name" class="form-input" placeholder="João Silva"
+                autocomplete="name" required />
+              <span class="form-error" role="alert" aria-live="polite"></span>
             </div>
-          </section>
 
-          <!-- Coluna 2: Formação -->
-          <section class="about-section about-card-col" aria-labelledby="education-title">
-            <h2 class="about-section-title" id="education-title">Formação</h2>
+            <div class="form-group">
+              <label for="input-email" class="form-label">Seu Email</label>
+              <input type="email" id="input-email" name="email" class="form-input" placeholder="joao@email.com"
+                autocomplete="email" required />
+              <span class="form-error" role="alert" aria-live="polite"></span>
+            </div>
 
-            <div class="about-entry-item">
-              <div class="about-entry-header">
-                <div class="about-entry-img-wrapper about-entry-icon-wrapper">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            <div class="form-group">
+              <label for="input-subject" class="form-label">Assunto</label>
+              <input type="text" id="input-subject" name="subject" class="form-input" placeholder="Proposta de projeto" />
+            </div>
+
+            <div class="form-group">
+              <label for="input-message" class="form-label">Sua Mensagem</label>
+              <textarea id="input-message" name="message" class="form-input form-textarea"
+                placeholder="Olá, gostaria de..." rows="4" required></textarea>
+              <span class="form-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-btn-wrapper">
+              <button type="submit" class="form-submit" id="form-submit" aria-label="Enviar mensagem">
+                <span class="btn-label">Enviar Mensagem</span>
+                <span class="btn-loading" hidden>Enviando…</span>
+              </button>
+            </div>
+
+            <div class="form-success" id="form-success" role="alert" aria-live="polite" hidden>
+              ✓ Mensagem enviada! Retornarei em breve.
+            </div>
+
+            <div class="form-error-msg" id="form-error-msg" role="alert" aria-live="polite" hidden>
+              ✕ Falha ao enviar. Tente novamente ou entre em contato por email diretamente.
+            </div>
+          </form>
+
+          <!-- Contact info blocks -->
+          <div class="contact-info-grid" id="contact-info-grid" aria-label="Informações de contato">
+            <!-- Populated by JavaScript -->
+          </div>
+
+          <!-- Seção de Download de Currículo -->
+          <section class="contact-resume-section" aria-label="Download de Currículo">
+            <div class="contact-resume-header">
+              <span class="contact-resume-line" aria-hidden="true"></span>
+              <span class="contact-resume-title">Currículo</span>
+              <span class="contact-resume-line" aria-hidden="true"></span>
+            </div>
+            <div class="contact-resume-grid">
+              <a href="assets/Currículo-Luiz-Gustavo-de-Oliveira.pdf" target="_blank" rel="noopener noreferrer" class="contact-info-item contact-resume-card" aria-label="Baixar Currículo em formato PDF">
+                <div class="contact-info-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
                   </svg>
                 </div>
-                <div class="about-entry-info">
-                  <span class="about-entry-status">Cursando</span>
-                  <h3 class="about-entry-title">Graduação em Análise e Desenvolvimento de Sistemas</h3>
-                  <p class="about-entry-subtitle">Ensino Superior</p>
-                </div>
-              </div>
+                <p class="contact-info-label">CURRÍCULO</p>
+                <span class="contact-info-value">Baixar Currículo</span>
+              </a>
             </div>
-
-            <div class="about-entry-item">
-              <div class="about-entry-header">
-                <div class="about-entry-img-wrapper">
-                  <img src="assets/senai.png" alt="SENAI Félix Guisard" class="about-entry-img" loading="lazy" />
-                </div>
-                <div class="about-entry-info">
-                  <span class="about-entry-period">2021 – 2022</span>
-                  <h3 class="about-entry-title">Técnico em Desenvolvimento de Sistemas</h3>
-                  <p class="about-entry-subtitle">SENAI Félix Guisard</p>
-                </div>
-              </div>
-            </div>
-
           </section>
-
-        </div>
-      </article>
-
-      <!-- PAGE: CONTACT -->
-      <article class="page" id="page-contact" data-page="contact" hidden>
-        <header class="page-header">
-          <h1 class="page-title">Vamos Conversar...</h1>
-        </header>
-
-        <!-- Contact form -->
-        <!--
-          Para integrar com Formspree: altere action para "https://formspree.io/f/SEU_ID"
-          Para usar EmailJS: chame emailjs.send() dentro de handleFormSubmit() em script.js
-        -->
-        <form class="contact-form" id="contact-form" novalidate aria-label="Formulário de contato">
-          <div class="form-group">
-            <label for="input-name" class="form-label">Seu Nome</label>
-            <input type="text" id="input-name" name="name" class="form-input" placeholder="João Silva"
-              autocomplete="name" required />
-            <span class="form-error" role="alert" aria-live="polite"></span>
-          </div>
-
-          <div class="form-group">
-            <label for="input-email" class="form-label">Seu Email</label>
-            <input type="email" id="input-email" name="email" class="form-input" placeholder="joao@email.com"
-              autocomplete="email" required />
-            <span class="form-error" role="alert" aria-live="polite"></span>
-          </div>
-
-          <div class="form-group">
-            <label for="input-subject" class="form-label">Assunto</label>
-            <input type="text" id="input-subject" name="subject" class="form-input" placeholder="Proposta de projeto" />
-          </div>
-
-          <div class="form-group">
-            <label for="input-message" class="form-label">Sua Mensagem</label>
-            <textarea id="input-message" name="message" class="form-input form-textarea"
-              placeholder="Olá, gostaria de..." rows="5" required></textarea>
-            <span class="form-error" role="alert" aria-live="polite"></span>
-          </div>
-
-          <button type="submit" class="form-submit" id="form-submit" aria-label="Enviar mensagem">
-            <span class="btn-label">Enviar Mensagem</span>
-            <span class="btn-loading" hidden>Enviando…</span>
-          </button>
-
-          <div class="form-success" id="form-success" role="alert" aria-live="polite" hidden>
-            ✓ Mensagem enviada! Retornarei em breve.
-          </div>
-
-          <div class="form-error-msg" id="form-error-msg" role="alert" aria-live="polite" hidden>
-            ✕ Falha ao enviar. Tente novamente ou entre em contato por email diretamente.
-          </div>
-        </form>
-
-        <!-- Contact info blocks -->
-        <div class="contact-info-grid" id="contact-info-grid" aria-label="Informações de contato">
-          <!-- Populated by JavaScript -->
         </div>
       </article>
 
     </section>
   </main>
+
+  <!-- ====================================================
+       PAGE: ABOUT — Fullscreen Cinematic (like Home/Work)
+  ==================================================== -->
+  <article class="page-about-cinematic" id="page-about" data-page="about" hidden>
+    <!-- Dark overlay -->
+    <div class="about-cinematic-overlay" aria-hidden="true"></div>
+
+
+
+    <!-- Right dark glass content panel (scrollable) -->
+    <div class="about-right-panel" id="about-right-panel" role="main" aria-label="Conteúdo sobre mim">
+      <div class="about-panel-inner">
+
+        <!-- Panel title -->
+        <header class="about-panel-header">
+          <div class="about-panel-kicker">
+            <span class="about-panel-kicker-line" aria-hidden="true"></span>
+            <h1 class="about-panel-title">Sobre</h1>
+          </div>
+        </header>
+
+        <!-- Bio paragraphs -->
+        <div class="about-panel-bio">
+          <p>Desenvolvedor Full Stack em formação, com Técnico em Desenvolvimento de Sistemas pelo SENAI e atualmente cursando Análise e Desenvolvimento de Sistemas.</p>
+          <p>Tenho experiência profissional em Tecnologia da Informação, adquirida durante minha atuação em seções de TI do Exército Brasileiro, onde trabalhei com suporte técnico, manutenção de hardware e software, equipamentos de vigilância e atendimento às demandas dos usuários.</p>
+          <p>Meu foco está no desenvolvimento de software, Machine Learning e na construção de aplicações web, utilizando tecnologias como Python, TypeScript, JavaScript, Node.js, React, Angular e Go.</p>
+          <p>Durante minha formação, venho desenvolvendo projetos acadêmicos e pessoais envolvendo desenvolvimento Full Stack, desenvolvimento de APIs REST, integração entre aplicações, bancos de dados, lógica de programação, programação orientada a objetos e versionamento de código com Git e GitHub.</p>
+        </div>
+
+        <!-- Tecnologias e Conhecimentos -->
+        <section class="about-panel-section" aria-labelledby="about-tech-title">
+          <div class="about-panel-section-header">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+              <line x1="14" y1="4" x2="10" y2="20"></line>
+            </svg>
+            <h2 class="about-panel-section-title" id="about-tech-title">Tecnologias e Conhecimentos</h2>
+          </div>
+          <ul class="about-panel-chips" aria-label="Lista de tecnologias">
+            <li>Python</li>
+            <li>TypeScript</li>
+            <li>JavaScript</li>
+            <li>Node.js</li>
+            <li>Go</li>
+            <li>React</li>
+            <li>Angular</li>
+            <li>APIs REST</li>
+            <li>Git e GitHub</li>
+            <li>SQL e Bancos de Dados</li>
+            <li>Desenvolvimento Web</li>
+            <li>Programação Orientada a Objetos</li>
+            <li>Desenvolvimento Full Stack</li>
+          </ul>
+        </section>
+
+        <!-- Minha Stack -->
+        <section class="about-panel-section" aria-labelledby="about-stack-title">
+          <div class="about-panel-section-header">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <h2 class="about-panel-section-title" id="about-stack-title">Minha Stack</h2>
+          </div>
+          <div class="about-stack-grid" id="about-stack-grid">
+            <div class="about-stack-group">
+              <p class="about-stack-group-name">Front-End</p>
+              <span class="about-stack-item">HTML5</span>
+              <span class="about-stack-item">CSS3</span>
+              <span class="about-stack-item">JavaScript</span>
+              <span class="about-stack-item">React</span>
+              <span class="about-stack-item">Angular</span>
+            </div>
+            <div class="about-stack-group">
+              <p class="about-stack-group-name">Back-End</p>
+              <span class="about-stack-item">TypeScript</span>
+              <span class="about-stack-item">Node.js</span>
+              <span class="about-stack-item">Golang (GO)</span>
+              <span class="about-stack-item">Python</span>
+              <span class="about-stack-item">Flask</span>
+              <span class="about-stack-item">FastAPI</span>
+              <span class="about-stack-item">Java</span>
+            </div>
+            <div class="about-stack-group">
+              <p class="about-stack-group-name">Infraestrutura</p>
+              <span class="about-stack-item">Docker</span>
+              <span class="about-stack-item">Amazon Web Services</span>
+            </div>
+            <div class="about-stack-group">
+              <p class="about-stack-group-name">Banco de Dados</p>
+              <span class="about-stack-item">MySQL</span>
+              <span class="about-stack-item">HeidiSQL</span>
+              <span class="about-stack-item">XAMPP</span>
+            </div>
+            <div class="about-stack-group">
+              <p class="about-stack-group-name">Inteligências Artificiais</p>
+              <span class="about-stack-item">Machine Learning</span>
+              <span class="about-stack-item">Linguagem R</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experiência -->
+        <section class="about-panel-section" aria-labelledby="about-exp-title">
+          <div class="about-panel-section-header">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+              <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
+            </svg>
+            <h2 class="about-panel-section-title" id="about-exp-title">Experiência</h2>
+          </div>
+          <div class="about-exp-entry">
+            <div class="about-exp-header">
+              <div class="about-exp-logo-wrapper">
+                <img src="assets/exercito.png" alt="Exército Brasileiro" class="about-exp-logo" loading="lazy" />
+              </div>
+              <div class="about-exp-meta">
+                <h4 class="about-exp-corp">Exército Brasileiro</h4>
+                <h3 class="about-exp-role">Militar - Exército Brasileiro</h3>
+                <p class="about-exp-dept">Atuação em Seção de Informática, Almoxarifado e Secretaria</p>
+              </div>
+            </div>
+            <ul class="about-exp-list">
+              <li>Atuação na Seção de Informática, realizando manutenção de hardware e software, equipamentos de vigilância, suporte técnico aos usuários e atendimento às demandas relacionadas aos recursos de Tecnologia da Informação.</li>
+              <li>Realização de atividades de manutenção, configuração e suporte de equipamentos de informática, contribuindo para o funcionamento dos recursos tecnológicos da unidade.</li>
+              <li>Atuação no Almoxarifado, realizando controle, organização e movimentação de materiais e equipamentos.</li>
+              <li>Apoio às atividades da Secretaria do Batalhão, auxiliando no despacho, recebimento, conferência e correção de documentações administrativas.</li>
+              <li>Organização e controle de documentos e informações, garantindo maior precisão e organização dos processos internos.</li>
+              <li>Desenvolvimento de experiência profissional em ambiente organizacional, com atuação em suporte técnico, resolução de problemas, organização, responsabilidade e atendimento às demandas internas.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Formação -->
+        <section class="about-panel-section" aria-labelledby="about-edu-title">
+          <div class="about-panel-section-header">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+            <h2 class="about-panel-section-title" id="about-edu-title">Formação</h2>
+          </div>
+          <div class="about-edu-grid">
+            <!-- ADS -->
+            <div class="about-edu-item">
+              <div class="about-edu-item-body">
+                <span class="about-edu-status">Cursando</span>
+                <h3 class="about-edu-degree">Graduação em Análise e Desenvolvimento de Sistemas</h3>
+                <p class="about-edu-inst">Ensino Superior</p>
+              </div>
+              <div class="about-edu-logo-wrapper">
+                <img src="assets/senai.png" alt="SENAI" class="about-edu-logo" loading="lazy" />
+              </div>
+            </div>
+            <!-- SENAI -->
+            <div class="about-edu-item">
+              <div class="about-edu-item-body">
+                <span class="about-edu-period">2021 – 2022</span>
+                <h3 class="about-edu-degree">Técnico em Desenvolvimento de Sistemas</h3>
+                <p class="about-edu-inst">SENAI Félix Guisard</p>
+              </div>
+              <div class="about-edu-logo-wrapper">
+                <img src="assets/senai.png" alt="SENAI" class="about-edu-logo" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Objetivo Profissional -->
+        <p class="about-objetivo">
+          Atualmente busco uma oportunidade de Estágio ou Desenvolvedor Júnior na área de Desenvolvimento de Software, onde possa aplicar meus conhecimentos, contribuir com a equipe e continuar evoluindo profissionalmente como desenvolvedor.
+        </p>
+
+      </div><!-- /.about-panel-inner -->
+    </div><!-- /.about-right-panel -->
+  </article>
 
   <!-- ====================================================
        PROJECT MODAL
